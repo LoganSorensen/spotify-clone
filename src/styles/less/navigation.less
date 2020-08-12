@@ -1,6 +1,100 @@
 .navigation-bar {
-    width: 10.3%;
-    border: 1px solid blue;
+  width: 10.3%;
+  background-color: @black;
+  
+  .fa-ellipsis-h {
+    color: white;
+    font-size: 2rem;
+    margin: 10%;
   }
   
+  a, h3 {
+    color: @light-gray;
+  }
   
+  a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.page-links, .lib-links, .playlist-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-links{
+  height: 17%;
+  padding: 4% 5%;
+}
+
+.page-link {
+  color: white;
+  display: flex;
+  margin: 5% 0;
+
+  i, a {
+    font-size: 1.7rem;
+  }
+
+  i {
+    margin-left: 7%;
+  }
+
+  a {
+    font-weight: bold;
+    width: 100%;
+  }
+}
+
+.lib-and-playlist-links{
+  border-bottom: 1px solid @light-gray;
+  height: 44.9%;
+  overflow-y: scroll;
+  padding: 2% 0 2% 10%;
+
+  a {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 4.5% 0;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .lib-links, .playlist-links {
+    margin-bottom: 16%;
+  }
+}
+
+.add-playlist-btn {
+  width: 100%;
+  color: @light-gray;
+  background-color: @black;
+  border: none;
+  height: 7.6%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+  // border-bottom: 1px solid @light-gray;
+
+  i {
+    padding: 0 2%;
+    font-size: 2.4rem;
+    margin: 0 2%;
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+.album-cover {
+  width: 100%;
+}

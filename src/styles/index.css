@@ -129,25 +129,157 @@ table {
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 .mid-section {
   display: flex;
   width: 100%;
   height: 90.7vh;
 }
 .viewport {
-  border: 1px solid red;
   width: 76%;
 }
 .top-bar {
-  border: 1px solid chartreuse;
+  background-color: #181818;
   height: 4.5vh;
 }
 .navigation-bar {
   width: 10.3%;
-  border: 1px solid blue;
+  background-color: #121212;
+}
+.navigation-bar .fa-ellipsis-h {
+  color: white;
+  font-size: 2rem;
+  margin: 10%;
+}
+.navigation-bar a,
+.navigation-bar h3 {
+  color: #B3b3b3;
+}
+.navigation-bar a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.navigation-bar a:hover {
+  color: white;
+}
+.page-links,
+.lib-links,
+.playlist-links {
+  display: flex;
+  flex-direction: column;
+}
+.page-links {
+  height: 17%;
+  padding: 4% 5%;
+}
+.page-link {
+  color: white;
+  display: flex;
+  margin: 5% 0;
+}
+.page-link i,
+.page-link a {
+  font-size: 1.7rem;
+}
+.page-link i {
+  margin-left: 7%;
+}
+.page-link a {
+  font-weight: bold;
+  width: 100%;
+}
+.lib-and-playlist-links {
+  border-bottom: 1px solid #B3b3b3;
+  height: 44.9%;
+  overflow-y: scroll;
+  padding: 2% 0 2% 10%;
+}
+.lib-and-playlist-links a {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 4.5% 0;
+}
+.lib-and-playlist-links h3 {
+  font-size: 1.3rem;
+}
+.lib-and-playlist-links .lib-links,
+.lib-and-playlist-links .playlist-links {
+  margin-bottom: 16%;
+}
+.add-playlist-btn {
+  width: 100%;
+  color: #B3b3b3;
+  background-color: #121212;
+  border: none;
+  height: 7.6%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.add-playlist-btn i {
+  padding: 0 2%;
+  font-size: 2.4rem;
+  margin: 0 2%;
+}
+.add-playlist-btn:hover {
+  color: white;
+}
+.album-cover {
+  width: 100%;
+}
+.friends-activity-bar {
+  width: 13.7%;
+  background-color: #121212;
+  padding: 1%;
+}
+.friends-activity-bar h2 {
+  font-size: 2rem;
+  color: white;
+  border-bottom: 1px solid #282828;
 }
 .controls-bar {
   width: 100%;
-  border: 1px solid peru;
   height: 9.3vh;
+  padding: 0.8%;
+  background-color: #282828;
+  display: flex;
+  align-items: center;
+}
+.controls-bar .song-info {
+  display: flex;
+}
+.controls-bar .song-info i {
+  color: white;
+}
+.controls-bar .names {
+  display: flex;
+  flex-direction: column;
+}
+.controls-bar .names .song-name {
+  color: white;
+  border-bottom: 1px solid transparent;
+}
+.controls-bar .names .song-name:hover {
+  border-bottom: 1px solid white;
+}
+.controls-bar .names .artist-name {
+  color: #B3b3b3;
+  border-bottom: 1px solid transparent;
+}
+.controls-bar .names .artist-name:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+.controls-bar .controls {
+  border: 1px solid white;
+  width: 55.5%;
+  height: 80%;
+  margin: 0 14.9% 0 20.5%;
+}
+.controls-bar .queue-and-audio {
+  border: 1px solid white;
+  width: 11%;
+  height: 80%;
 }

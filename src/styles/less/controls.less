@@ -1,5 +1,53 @@
 .controls-bar {
   width: 100%;
-  border: 1px solid peru;
   height: 9.3vh;
+  padding: 0.8%;
+  background-color: @dark-gray;
+  display: flex;
+  align-items: center;
+
+  .song-info {
+    display: flex;
+
+    i {
+      color: white;
+    }
+  }
+
+  .names {
+    display: flex;
+    flex-direction: column;
+
+    .song-name {
+      color: white;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+
+    .artist-name {
+      color: @light-gray;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        color: white;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+
+  .controls {
+    border: 1px solid white;
+    width: 55.5%;
+    height: 80%;
+    margin: 0 14.9% 0 20.5%;
+  }
+
+  .queue-and-audio {
+    border: 1px solid white;
+    width: 11%;
+    height: 80%;
+  }
 }
