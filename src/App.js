@@ -5,7 +5,6 @@ import Viewport from "./components/viewport";
 import FriendsActivity from "./components/friendsActivity";
 import ControlBar from "./components/controlBar";
 
-import "./App.css";
 import "./styles/index.css"
 
 function App() {
