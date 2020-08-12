@@ -131,6 +131,27 @@ table {
 }
 html {
   font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  padding: 50%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  bottom: 150%;
+  right: -150%;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 .mid-section {
   display: flex;
@@ -249,37 +270,90 @@ html {
 }
 .controls-bar .song-info {
   display: flex;
-}
-.controls-bar .song-info i {
-  color: white;
-}
-.controls-bar .names {
-  display: flex;
   flex-direction: column;
+  width: 20%;
 }
-.controls-bar .names .song-name {
+.controls-bar a {
+  text-decoration: none;
+}
+.controls-bar .name-and-heart {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.controls-bar .name-and-heart .song-name {
   color: white;
   border-bottom: 1px solid transparent;
+  margin-right: 3%;
+  font-size: 1.4rem;
 }
-.controls-bar .names .song-name:hover {
-  border-bottom: 1px solid white;
+.controls-bar .name-and-heart .song-name:hover {
+  text-decoration: underline;
 }
-.controls-bar .names .artist-name {
+.controls-bar .name-and-heart i {
+  color: white;
+  font-size: 1.5rem;
+}
+.controls-bar .artist-name {
   color: #B3b3b3;
   border-bottom: 1px solid transparent;
+  font-size: 1.2rem;
 }
-.controls-bar .names .artist-name:hover {
+.controls-bar .artist-name:hover {
+  text-decoration: underline;
   color: white;
-  border-bottom: 1px solid white;
 }
 .controls-bar .controls {
   border: 1px solid white;
   width: 55.5%;
   height: 80%;
-  margin: 0 14.9% 0 20.5%;
+  margin: 0 14.9% 0 6.5%;
+}
+.controls-bar .controls .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controls-bar .controls .buttons i {
+  color: #B3b3b3;
+  font-size: 1.5rem;
+  margin: 0 1.8%;
+}
+.controls-bar .controls .buttons i:hover {
+  color: white;
+}
+.controls-bar .controls .buttons .fa-play-circle {
+  font-size: 3rem;
 }
 .controls-bar .queue-and-audio {
-  border: 1px solid white;
   width: 11%;
   height: 80%;
+  display: flex;
+  align-items: center;
+}
+.controls-bar .queue-and-audio i {
+  color: #B3b3b3;
+  font-size: 1.5rem;
+  margin: 0 6%;
+}
+.controls-bar .queue-and-audio i:hover {
+  color: white;
+}
+.controls-bar .queue-and-audio i:active {
+  color: #B3b3b3;
+}
+.controls-bar .queue-and-audio .volume {
+  display: flex;
+  align-items: center;
+  width: 57%;
+}
+.controls-bar .queue-and-audio .volume:hover i {
+  color: white;
+}
+.controls-bar .queue-and-audio .volume i:active {
+  color: #B3b3b3;
+}
+.controls-bar .queue-and-audio .volume input {
+  width: 100%;
 }

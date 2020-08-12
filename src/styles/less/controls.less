@@ -8,33 +8,45 @@
 
   .song-info {
     display: flex;
-
-    i {
-      color: white;
-    }
+    flex-direction: column;
+    width: 20%;
+    // border: 1px solid white;
   }
 
-  .names {
+  a {
+    text-decoration: none;
+  }
+
+  .name-and-heart {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3%;
 
     .song-name {
       color: white;
       border-bottom: 1px solid transparent;
+      margin-right: 3%;
+      font-size: 1.4rem;
 
       &:hover {
-        border-bottom: 1px solid white;
+        text-decoration: underline;
       }
     }
 
-    .artist-name {
-      color: @light-gray;
-      border-bottom: 1px solid transparent;
+    i {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+  .artist-name {
+    color: @light-gray;
+    border-bottom: 1px solid transparent;
+    font-size: 1.2rem;
 
-      &:hover {
-        color: white;
-        border-bottom: 1px solid white;
-      }
+    &:hover {
+      text-decoration: underline;
+      color: white;
     }
   }
 
@@ -42,12 +54,67 @@
     border: 1px solid white;
     width: 55.5%;
     height: 80%;
-    margin: 0 14.9% 0 20.5%;
+    margin: 0 14.9% 0 6.5%;
+    // text-align: center;
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: @light-gray;
+        font-size: 1.5rem;
+        margin: 0 1.8%;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      .fa-play-circle {
+        font-size: 3rem;
+      }
+    }
   }
 
   .queue-and-audio {
-    border: 1px solid white;
     width: 11%;
     height: 80%;
+    display: flex;
+    align-items: center;
+
+    i {
+      color: @light-gray;
+      font-size: 1.5rem;
+      margin: 0 6%;
+
+      &:hover {
+        color: white;
+      }
+
+      &:active {
+        color: @light-gray;
+      }
+    }
+
+    .volume {
+      display: flex;
+      align-items: center;
+      width: 57%;
+
+      &:hover {
+        i {
+          color: white;
+        }
+      }
+
+      i:active {
+        color: @light-gray;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
   }
 }
