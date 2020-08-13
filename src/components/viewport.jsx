@@ -2,11 +2,19 @@ import React from "react";
 
 import TopBar from "./topBar";
 
-const Viewport = () => {
+const Viewport = (props) => {
+  
+
   return (
     <div className="viewport">
       <TopBar />
-      <div>Viewport</div>
+      {props.page === "Browse" ? (
+        <div>Browse</div>
+      ) : props.page === "Radio" ? (
+        <div>Radio</div>
+      ) : (
+        <div>Home</div>
+      )}
     </div>
   );
 };

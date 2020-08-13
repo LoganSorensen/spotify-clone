@@ -9,16 +9,13 @@
   }
 
   a,
-  h3 {
+  h3,
+  i {
     color: @light-gray;
   }
 
   a {
     text-decoration: none;
-
-    &:hover {
-      color: white;
-    }
   }
 }
 
@@ -38,23 +35,33 @@
   display: flex;
   margin: 3.8% 0;
   border-left: 4px solid transparent;
+  color: @light-gray;
+  font-size: 1.4rem;
+  font-weight: bold;
+  align-items: center;
+  &:hover {
+    color:white;
+    i {
+      color: white;
+    }
+  }
 
   i {
     font-size: 1.7rem;
     margin: 0 7%;
   }
 
-  a {
-    font-size: 1.4rem;
-    font-weight: bold;
-    width: 100%;
-  }
+  // a {
+  //   font-size: 1.4rem;
+  //   font-weight: bold;
+  //   width: 100%;
+  // }
 }
 
 .page-link-active {
   border-left: 4px solid @green;
-
-  a {
+  color: white;
+  i {
     color: white;
   }
 }
@@ -82,7 +89,6 @@
   }
 }
 
-
 // scrollbar styles
 .lib-and-playlist-links::-webkit-scrollbar {
   width: 1.8em;
@@ -94,8 +100,6 @@
 .lib-and-playlist-links::-webkit-scrollbar-button {
   background-color: @black;
 }
-
-
 
 .add-playlist-btn {
   width: 100%;
@@ -109,7 +113,6 @@
   align-items: center;
 
   i {
-    // padding: 0 2%;
     color: @black;
     background-color: @light-gray;
     font-size: 2.4rem;
@@ -126,5 +129,5 @@
 .album-cover {
   width: 100%;
   overflow: hidden;
-  max-height: 21.3vh;
+  max-height: 23.5%;
 }

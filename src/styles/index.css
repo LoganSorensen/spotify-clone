@@ -225,14 +225,12 @@ html {
   margin: 10%;
 }
 .navigation-bar a,
-.navigation-bar h3 {
+.navigation-bar h3,
+.navigation-bar i {
   color: #b3b3b3;
 }
 .navigation-bar a {
   text-decoration: none;
-}
-.navigation-bar a:hover {
-  color: white;
 }
 .page-links,
 .lib-links,
@@ -248,20 +246,26 @@ html {
   display: flex;
   margin: 3.8% 0;
   border-left: 4px solid transparent;
+  color: #b3b3b3;
+  font-size: 1.4rem;
+  font-weight: bold;
+  align-items: center;
+}
+.page-link:hover {
+  color: white;
+}
+.page-link:hover i {
+  color: white;
 }
 .page-link i {
   font-size: 1.7rem;
   margin: 0 7%;
 }
-.page-link a {
-  font-size: 1.4rem;
-  font-weight: bold;
-  width: 100%;
-}
 .page-link-active {
   border-left: 4px solid #1ed760;
+  color: white;
 }
-.page-link-active a {
+.page-link-active i {
   color: white;
 }
 .lib-and-playlist-links {
@@ -317,7 +321,7 @@ html {
 .album-cover {
   width: 100%;
   overflow: hidden;
-  max-height: 21.3vh;
+  max-height: 23.5%;
 }
 .friends-activity-bar {
   width: 13.7%;
