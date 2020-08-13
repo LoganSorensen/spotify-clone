@@ -8,7 +8,71 @@
   width: 76%;
 }
 
+// top bar styles
 .top-bar {
   background-color: @darker-gray;
   height: 4.5vh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  i {
+    font-size: 1.6rem;
+  }
+
+  .left-side {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+
+    .search-bar {
+      border-radius: 50px;
+      border: none;
+      padding: 2%;
+    }
+    ::placeholder {
+      color: black;
+      font-size: 1.4rem;
+    }
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+    width: 14.5%;
+    height: 100%;
+    padding-right: 2.3%;
+
+    .user {
+      display: flex;
+      align-items: center;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      margin-right: 10%;
+
+      &:hover span {
+        text-decoration: underline;
+      }
+
+      span {
+        font-size: 1.4rem;
+      }
+
+      .user-image-cont {
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        margin-right: 2%;
+        border-radius: 50px;
+      }
+    }
+
+    .fa-chevron-down {
+      // margin-right: 50%;
+    }
+  }
 }

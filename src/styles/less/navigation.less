@@ -1,93 +1,121 @@
 .navigation-bar {
   width: 10.3%;
   background-color: @black;
-  
+
   .fa-ellipsis-h {
     color: white;
     font-size: 2rem;
     margin: 10%;
   }
-  
-  a, h3 {
+
+  a,
+  h3 {
     color: @light-gray;
   }
-  
+
   a {
-    font-size: 1.5rem;
     text-decoration: none;
-    
+
     &:hover {
       color: white;
     }
   }
 }
 
-.page-links, .lib-links, .playlist-links {
+.page-links,
+.lib-links,
+.playlist-links {
   display: flex;
   flex-direction: column;
 }
 
-.page-links{
+.page-links {
   height: 17%;
-  padding: 4% 5%;
 }
 
 .page-link {
-  color: white;
+  padding: 2% 0;
   display: flex;
-  margin: 5% 0;
-
-  i, a {
-    font-size: 1.7rem;
-  }
+  margin: 3.8% 0;
+  border-left: 4px solid transparent;
 
   i {
-    margin-left: 7%;
+    font-size: 1.7rem;
+    margin: 0 7%;
   }
 
   a {
+    font-size: 1.4rem;
     font-weight: bold;
     width: 100%;
   }
 }
 
-.lib-and-playlist-links{
-  border-bottom: 1px solid @light-gray;
+.page-link-active {
+  border-left: 4px solid @green;
+
+  a {
+    color: white;
+  }
+}
+
+.lib-and-playlist-links {
+  border-bottom: 1px solid @dark-gray;
   height: 44.9%;
   overflow-y: scroll;
   padding: 2% 0 2% 10%;
 
   a {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    margin: 4.5% 0;
+    margin: 5.85% 0;
   }
 
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
   }
 
-  .lib-links, .playlist-links {
+  .lib-links,
+  .playlist-links {
     margin-bottom: 16%;
   }
 }
+
+
+// scrollbar styles
+.lib-and-playlist-links::-webkit-scrollbar {
+  width: 1.8em;
+}
+
+.lib-and-playlist-links::-webkit-scrollbar-thumb {
+  background-color: #535353;
+}
+.lib-and-playlist-links::-webkit-scrollbar-button {
+  background-color: @black;
+}
+
+
 
 .add-playlist-btn {
   width: 100%;
   color: @light-gray;
   background-color: @black;
   border: none;
+  border-bottom: 1px solid @dark-gray;
   height: 7.6%;
   text-align: left;
   display: flex;
   align-items: center;
 
-  // border-bottom: 1px solid @light-gray;
-
   i {
-    padding: 0 2%;
+    // padding: 0 2%;
+    color: @black;
+    background-color: @light-gray;
     font-size: 2.4rem;
     margin: 0 2%;
+    border: 1px solid @light-gray;
+    border-radius: 50px;
   }
 
   &:hover {
@@ -97,4 +125,6 @@
 
 .album-cover {
   width: 100%;
+  overflow: hidden;
+  max-height: 21.3vh;
 }

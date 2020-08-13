@@ -7,7 +7,7 @@ const Navigation = () => {
     <div className="navigation-bar">
       <i class="fas fa-ellipsis-h"></i>
       <div className="page-links">
-        <div className="page-link">
+        <div className="page-link page-link-active">
           <a href="#">
             <i class="fas fa-home"></i>Home
           </a>
@@ -28,7 +28,7 @@ const Navigation = () => {
         <i class="fas fa-plus-circle"></i>New Playlist
       </button>
       <div className="album-cover">
-        <img src="" alt="album cover art" />
+        <img src="https://source.unsplash.com/random/200x200" alt="album cover art" />
       </div>
     </div>
   );
