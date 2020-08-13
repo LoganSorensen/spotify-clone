@@ -39,6 +39,7 @@
   font-size: 1.4rem;
   font-weight: bold;
   align-items: center;
+  cursor: default;
   &:hover {
     color:white;
     i {
@@ -83,15 +84,7 @@
   }
 }
 
-// scrollbar styles
 .lib-and-playlist-links::-webkit-scrollbar {
-  width: 1.8em;
-}
-
-.lib-and-playlist-links::-webkit-scrollbar-thumb {
-  background-color: #535353;
-}
-.lib-and-playlist-links::-webkit-scrollbar-button {
   background-color: @black;
 }
 
@@ -124,4 +117,10 @@
   width: 100%;
   overflow: hidden;
   max-height: 23.5%;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin: 50% auto;
+  }
 }

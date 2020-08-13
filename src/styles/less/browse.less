@@ -1,0 +1,92 @@
+.top-section {
+  padding: 8% 2% 0;
+  background: rgb(62, 62, 62);
+  background: linear-gradient(
+    180deg,
+    rgba(62, 62, 62, 1) 0%,
+    rgba(24, 24, 24, 1) 100%
+  );
+
+  h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  nav {
+    margin: 2% 0 3%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    .link {
+    cursor: pointer;
+      color: @light-gray;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1%;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .active {
+      color: white;
+      border-bottom: 1px solid @green;
+    }
+  }
+
+  h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 100%;
+    padding-bottom: 0.5%;
+    border-bottom: 1px solid @dark-gray;
+  }
+}
+
+.bottom-section {
+  background-color: @darker-gray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 1% 0;
+  min-height: 100%;
+
+  .genre-card {
+    border: 1px solid @light-gray;
+    width: 210px;
+    height: 210px;
+    margin-bottom: 1.75%;
+    margin-left: 1.75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+      p {
+        border-color: white;
+      }
+    }
+
+    p,
+    i {
+      color: white;
+    }
+
+    i {
+      font-size: 6rem;
+      margin-bottom: 10%;
+    }
+
+    p {
+      font-size: 1.8rem;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1%;
+    }
+  }
+}

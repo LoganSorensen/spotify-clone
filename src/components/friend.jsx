@@ -12,7 +12,7 @@ const Friend = () => {
         <p className="song-name">Let Me Down (feat. blink...)</p>
         <p className="artist-name">Oliver Tree</p>
         <p className="album-name">
-          <i class="fas fa-record-vinyl"></i>Let Me Down (feat. b...
+          <i className="fas fa-record-vinyl"></i>Let Me Down (feat. b...
         </p>
       </div>
     </div>

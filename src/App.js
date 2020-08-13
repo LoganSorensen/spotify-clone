@@ -9,7 +9,7 @@ import "./styles/index.css"
 
 function App() {
 
-const [page, setPage] = useState("Home")
+const [page, setPage] = useState("Browse")
 
   const changePage = (page) => {
     console.log('page changed to', page)

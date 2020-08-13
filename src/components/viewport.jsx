@@ -1,20 +1,21 @@
 import React from "react";
 
 import TopBar from "./topBar";
+import Browse from "./pages/browse";
 
 const Viewport = (props) => {
-  
-
   return (
     <div className="viewport">
       <TopBar />
-      {props.page === "Browse" ? (
-        <div>Browse</div>
-      ) : props.page === "Radio" ? (
-        <div>Radio</div>
-      ) : (
-        <div>Home</div>
-      )}
+      <div className="view-content">
+        {props.page === "Browse" ? (
+          <Browse />
+        ) : props.page === "Radio" ? (
+          <div>Radio</div>
+        ) : (
+          <div>Home</div>
+        )}
+      </div>
     </div>
   );
 };
