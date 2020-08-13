@@ -153,6 +153,21 @@ html {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+.tooltip .tooltiptext-bottom {
+  visibility: hidden;
+  padding: 50%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  top: 150%;
+  right: -150%;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext-bottom {
+  visibility: visible;
+}
 .mid-section {
   display: flex;
   width: 100%;
@@ -214,6 +229,9 @@ html {
   width: 30px;
   margin-right: 2%;
   border-radius: 50px;
+}
+.top-bar .right-side i {
+  color: #b3b3b3;
 }
 .navigation-bar {
   width: 10.3%;
@@ -329,9 +347,79 @@ html {
   padding: 1%;
 }
 .friends-activity-bar h2 {
-  font-size: 2rem;
+  font-size: 1.85rem;
+  font-weight: bold;
   color: white;
   border-bottom: 1px solid #282828;
+  padding-bottom: 7%;
+  margin-top: 19%;
+  margin-bottom: 8%;
+}
+.friends-activity-bar .friend-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.friends-activity-bar .friend-icon {
+  border: 1px solid white;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+.friends-activity-bar .friend {
+  color: #b3b3b3;
+  width: 81%;
+}
+.friends-activity-bar .friend h4:hover,
+.friends-activity-bar .friend p:hover {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.friends-activity-bar .friend h4 {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.friends-activity-bar .friend .name-and-time {
+  display: flex;
+  justify-content: space-between;
+}
+.friends-activity-bar .friend .name-and-time span {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+.friends-activity-bar .friend i {
+  font-size: 1.5rem;
+  color: #121212;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin-right: 2%;
+}
+.friends-activity-bar .friend p {
+  font-size: 1.3rem;
+}
+.friends-activity-bar .friend > * {
+  margin: 2.9% 0;
+}
+.friends-activity-bar button {
+  color: white;
+  background-color: #151515;
+  border: 1px solid #b3b3b3;
+  padding: 4% 8%;
+  width: 70%;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 20% 15%;
+}
+.friends-activity-bar button:hover {
+  transform: scale(1.07);
+  border-color: white;
 }
 .controls-bar {
   width: 100%;
@@ -360,7 +448,6 @@ html {
 }
 .controls-bar .name-and-heart .song-name {
   color: white;
-  border-bottom: 1px solid transparent;
   margin-right: 3%;
   font-size: 1.4rem;
 }
@@ -373,7 +460,6 @@ html {
 }
 .controls-bar .artist-name {
   color: #b3b3b3;
-  border-bottom: 1px solid transparent;
   font-size: 1.2rem;
 }
 .controls-bar .artist-name:hover {
@@ -381,7 +467,6 @@ html {
   color: white;
 }
 .controls-bar .controls {
-  border: 1px solid white;
   width: 55.5%;
   height: 80%;
   margin: 0 14.9% 0 6.5%;

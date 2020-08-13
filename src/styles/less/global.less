@@ -28,4 +28,22 @@ html {
   &:hover .tooltiptext {
     visibility: visible;
   }
+
+  .tooltiptext-bottom {
+    visibility: hidden;
+    padding: 50%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    top: 150%;
+    right: -150%;
+
+    position: absolute;
+    z-index: 1;
+  }
+  &:hover .tooltiptext-bottom {
+    visibility: visible;
+  }
 }
+

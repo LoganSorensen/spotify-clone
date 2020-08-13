@@ -12,11 +12,11 @@ const ControlBar = () => {
       </div>
       <div className="controls">
         <div className="buttons">
-        <i className="fas fa-random"></i>
-        <i className="fas fa-step-backward"></i>
-        <i className="far fa-play-circle"></i>
-        <i className="fas fa-step-forward"></i>
-        <i className="fas fa-redo-alt"></i>
+        <i className="fas fa-random tooltip"><span className="tooltiptext-bottom">Shuffle</span></i>
+        <i className="fas fa-step-backward tooltip"><span className="tooltiptext-bottom">Previous</span></i>
+        <i className="far fa-play-circle tooltip"></i>
+        <i className="fas fa-step-forward tooltip"><span className="tooltiptext-bottom">Next</span></i>
+        <i className="fas fa-redo-alt tooltip"><span className="tooltiptext-bottom">Repeat</span></i>
         </div>
       </div>
       <div className="queue-and-audio">

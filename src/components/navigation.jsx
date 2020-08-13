@@ -13,7 +13,6 @@ const Navigation = (props) => {
   const links = document.querySelectorAll(".page-link");
 
   const makeActive = (e) => {
-    console.log("makeActive", e.target);
     links.forEach((link) => {
       link.classList.remove("page-link-active");
     });
@@ -28,7 +27,7 @@ const Navigation = (props) => {
     <div className="navigation-bar">
       <i className="fas fa-ellipsis-h"></i>
       <div className="page-links">
-        <div className="page-link" onClick={handleClick}>
+        <div className="page-link page-link-active" onClick={handleClick}>
           <i className="fas fa-home"></i>
           Home
         </div>
