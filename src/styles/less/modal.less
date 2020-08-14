@@ -1,0 +1,94 @@
+.modal-dialog {
+  min-width: 36%;
+}
+
+.modal-content {
+    margin-top: 44%;
+  border-radius: 20px !important;
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    background-color: @dark-gray;
+    border: none;
+  }
+
+  .modal-header {
+    border-radius: 10px 10px 0 0;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    h5 {
+      font-size: 2rem;
+      margin-left: 40%;
+    }
+
+    .close {
+      text-shadow: none;
+      opacity: 1;
+    }
+    
+    span {
+      color: @light-gray;
+      font-size: 4rem;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .modal-body {
+    color: @light-gray;
+    display: flex;
+
+
+    .choose-img {
+      width: 220px;
+      height: 220px;
+      margin: 0 2%;
+      background-color: #404040;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+
+      i {
+        font-size: 5rem;
+        margin-bottom: 5%;
+      }
+    }
+
+    .playlist-inputs {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      font-size: 1.5rem;
+
+      textarea {
+        height: 70%;
+        resize: none;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .modal-footer {
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    padding: 2%;
+
+    button {
+      background-color: @green-alt;
+      border: none;
+      border-radius: 50px;
+      padding: 1.2%;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      width: 20%;
+    }
+  }
+}

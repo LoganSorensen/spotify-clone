@@ -133,12 +133,12 @@ html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
-.tooltip {
+.tooltip-custom {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
 }
-.tooltip .tooltiptext {
+.tooltip-custom .tooltiptext {
   visibility: hidden;
   padding: 50%;
   background-color: black;
@@ -150,10 +150,10 @@ html {
   position: absolute;
   z-index: 1;
 }
-.tooltip:hover .tooltiptext {
+.tooltip-custom:hover .tooltiptext {
   visibility: visible;
 }
-.tooltip .tooltiptext-bottom {
+.tooltip-custom .tooltiptext-bottom {
   visibility: hidden;
   padding: 50%;
   background-color: black;
@@ -165,7 +165,7 @@ html {
   position: absolute;
   z-index: 1;
 }
-.tooltip:hover .tooltiptext-bottom {
+.tooltip-custom:hover .tooltiptext-bottom {
   visibility: visible;
 }
 ::-webkit-scrollbar {
@@ -271,28 +271,29 @@ html {
 .page-links {
   height: 17%;
 }
-.page-link {
-  padding: 2% 0;
+.page-link-custom {
+  width: 100%;
+  outline: 0;
+  padding: 5.8% 10%;
   display: flex;
-  margin: 3.8% 0;
   border: none;
   border-left: 4px solid transparent;
-  background-color: transparent;
+  background-color: transparent ;
   color: #b3b3b3;
   font-size: 1.4rem;
   font-weight: bold;
   align-items: center;
   cursor: default;
 }
-.page-link:hover {
+.page-link-custom:hover {
   color: white;
 }
-.page-link:hover i {
+.page-link-custom:hover i {
   color: white;
 }
-.page-link i {
+.page-link-custom i {
   font-size: 1.7rem;
-  margin: 0 7%;
+  margin: 0 7% 0 0;
 }
 .page-link-active {
   border-left: 4px solid #1ed760;
@@ -305,7 +306,10 @@ html {
   border-bottom: 1px solid #282828;
   height: 44.9%;
   overflow-y: scroll;
-  padding: 2% 0 2% 10%;
+  padding: 2% 0 2% 0%;
+}
+.lib-and-playlist-links h3 {
+  padding-left: 10%;
 }
 .lib-and-playlist-links a {
   font-size: 1.4rem;
@@ -333,7 +337,9 @@ html {
   background-color: #121212;
   border: none;
   border-bottom: 1px solid #282828;
-  height: 7.6%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 9.5%;
   text-align: left;
   display: flex;
   align-items: center;
@@ -538,6 +544,86 @@ html {
 }
 .controls-bar .queue-and-audio .volume input {
   width: 100%;
+}
+.modal-dialog {
+  min-width: 36%;
+}
+.modal-content {
+  margin-top: 44%;
+  border-radius: 20px !important;
+}
+.modal-content .modal-header,
+.modal-content .modal-body,
+.modal-content .modal-footer {
+  background-color: #282828;
+  border: none;
+}
+.modal-content .modal-header {
+  border-radius: 10px 10px 0 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.modal-content .modal-header h5 {
+  font-size: 2rem;
+  margin-left: 40%;
+}
+.modal-content .modal-header .close {
+  text-shadow: none;
+  opacity: 1;
+}
+.modal-content .modal-header span {
+  color: #b3b3b3;
+  font-size: 4rem;
+}
+.modal-content .modal-header span:hover {
+  color: white;
+}
+.modal-content .modal-body {
+  color: #b3b3b3;
+  display: flex;
+}
+.modal-content .modal-body .choose-img {
+  width: 220px;
+  height: 220px;
+  margin: 0 2%;
+  background-color: #404040;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+.modal-content .modal-body .choose-img i {
+  font-size: 5rem;
+  margin-bottom: 5%;
+}
+.modal-content .modal-body .playlist-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  font-size: 1.5rem;
+}
+.modal-content .modal-body .playlist-inputs textarea {
+  height: 70%;
+  resize: none;
+  border-radius: 5px;
+}
+.modal-content .modal-footer {
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+  padding: 2%;
+}
+.modal-content .modal-footer button {
+  background-color: #1db954;
+  border: none;
+  border-radius: 50px;
+  padding: 1.2%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  width: 20%;
 }
 .top-section {
   padding: 8% 2% 0;

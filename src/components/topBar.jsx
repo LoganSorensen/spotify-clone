@@ -9,11 +9,11 @@ const TopBar = () => {
         <input type="text" className="search-bar" placeholder="Search" />
       </div>
       <div className="right-side">
-        <div className="user tooltip">
+        <div className="user tooltip-custom">
           <div className="user-image-cont"></div>
           <span>Logan Sorensen</span>
         </div>
-        <i className="fas fa-chevron-down tooltip">
+        <i className="fas fa-chevron-down tooltip-custom">
           <span className="tooltiptext-bottom">Menu</span>
         </i>
       </div>
