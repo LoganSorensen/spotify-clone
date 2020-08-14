@@ -269,12 +269,12 @@ html {
   flex-direction: column;
 }
 .page-links {
-  height: 17%;
+  height: 16.4%;
 }
 .page-link-custom {
   width: 100%;
   outline: 0;
-  padding: 5.8% 10%;
+  padding: 4.8% 10%;
   display: flex;
   border: none;
   border-left: 4px solid transparent;
@@ -304,9 +304,12 @@ html {
 }
 .lib-and-playlist-links {
   border-bottom: 1px solid #282828;
-  height: 44.9%;
+  height: 45.4%;
   overflow-y: scroll;
   padding: 2% 0 2% 0%;
+}
+.lib-and-playlist-links .page-link-custom {
+  padding: 3% 10%;
 }
 .lib-and-playlist-links h3 {
   padding-left: 10%;
@@ -575,12 +578,20 @@ html {
 .modal-content .modal-header span {
   color: #b3b3b3;
   font-size: 4rem;
+  font-weight: 100;
 }
 .modal-content .modal-header span:hover {
   color: white;
 }
 .modal-content .modal-body {
   color: #b3b3b3;
+}
+.modal-content .modal-body form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-content .modal-body .playlist-form {
   display: flex;
 }
 .modal-content .modal-body .choose-img {
@@ -605,17 +616,16 @@ html {
   width: 400px;
   font-size: 1.5rem;
 }
+.modal-content .modal-body .playlist-inputs input {
+  padding: 1% 2%;
+}
 .modal-content .modal-body .playlist-inputs textarea {
   height: 70%;
   resize: none;
   border-radius: 5px;
-}
-.modal-content .modal-footer {
-  justify-content: center;
-  border-radius: 0 0 10px 10px;
   padding: 2%;
 }
-.modal-content .modal-footer button {
+.modal-content .modal-body button {
   background-color: #1db954;
   border: none;
   border-radius: 50px;
@@ -624,6 +634,10 @@ html {
   font-weight: bold;
   letter-spacing: 1.2px;
   width: 20%;
+  margin-top: 3%;
+}
+.modal-content .modal-footer {
+  border-radius: 0 0 10px 10px;
 }
 .top-section {
   padding: 8% 2% 0;

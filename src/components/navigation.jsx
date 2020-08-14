@@ -1,6 +1,6 @@
 import React from "react";
 
-import ModalExample from './modalExample';
+import PlaylistModal from './playlistModal';
 import LibraryNav from "./libraryNav";
 
 const Navigation = (props) => {
@@ -49,7 +49,7 @@ const Navigation = (props) => {
       {/* <button className="add-playlist-btn">
         <i className="fas fa-plus-circle"></i>New Playlist
       </button> */}
-        <ModalExample />
+        <PlaylistModal />
       <div className="album-cover">
         <img
           src="https://source.unsplash.com/random/200x200"

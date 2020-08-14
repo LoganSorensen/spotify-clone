@@ -3,7 +3,7 @@
 }
 
 .modal-content {
-    margin-top: 44%;
+  margin-top: 44%;
   border-radius: 20px !important;
 
   .modal-header,
@@ -28,10 +28,11 @@
       text-shadow: none;
       opacity: 1;
     }
-    
+
     span {
       color: @light-gray;
       font-size: 4rem;
+      font-weight: 100;
       &:hover {
         color: white;
       }
@@ -40,8 +41,16 @@
 
   .modal-body {
     color: @light-gray;
-    display: flex;
 
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .playlist-form {
+        display: flex;
+    }
 
     .choose-img {
       width: 220px;
@@ -67,18 +76,17 @@
       width: 400px;
       font-size: 1.5rem;
 
+      input {
+          padding: 1% 2%;
+      }
+
       textarea {
         height: 70%;
         resize: none;
         border-radius: 5px;
+        padding: 2%;
       }
     }
-  }
-
-  .modal-footer {
-    justify-content: center;
-    border-radius: 0 0 10px 10px;
-    padding: 2%;
 
     button {
       background-color: @green-alt;
@@ -89,6 +97,11 @@
       font-weight: bold;
       letter-spacing: 1.2px;
       width: 20%;
+      margin-top: 3%;
     }
+  }
+
+  .modal-footer {
+    border-radius: 0 0 10px 10px;
   }
 }
