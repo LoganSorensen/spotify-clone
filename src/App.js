@@ -9,9 +9,10 @@ import "./styles/index.css"
 
 function App() {
 
-const [page, setPage] = useState("Browse")
+const [page, setPage] = useState("Playlist")
 
   const changePage = (page) => {
+    console.log(page)
     console.log('page changed to', page)
     setPage(page)
   }

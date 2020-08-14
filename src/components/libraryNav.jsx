@@ -12,7 +12,7 @@ const LibraryNav = (props) => {
         <button className="page-link-custom">Liked Songs</button>
         <button className="page-link-custom">Albums</button>
         <button className="page-link-custom">Artists</button>
-        <button className="page-link-custom">Podcasts</button>
+        <button className="page-link-custom" value='Podcasts'>Podcasts</button>
       </div>
       <div className="playlist-links">
         <h3 className="playlist-header">PLAYLISTS</h3>
@@ -22,6 +22,7 @@ const LibraryNav = (props) => {
               key={playlist.id}
               className="page-link-custom"
               onClick={props.handlePageChange}
+              value='Playlist'
             >
               {playlist.name}
             </button>

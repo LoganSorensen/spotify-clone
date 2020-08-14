@@ -5,11 +5,12 @@ import LibraryNav from "./libraryNav";
 
 const Navigation = (props) => {
   const handlePageChange = (e) => {
-    let pageName = e.target.innerHTML;
-    pageName = pageName.split(">");
-    console.log(pageName[pageName.length - 1]);
+    let pageName = e.target.value;
+    // pageName = pageName.split(">");
+    // console.log(pageName[pageName.length - 1]);
+    // console.log('value',e.target.value)
 
-    props.changePage(pageName[pageName.length - 1]);
+    props.changePage(pageName);
   };
 
   const links = document.querySelectorAll(".page-link-custom");
@@ -29,21 +30,22 @@ const Navigation = (props) => {
     <div className="navigation-bar">
       <i className="fas fa-ellipsis-h"></i>
       <div className="page-links">
-        <div
+        <button
           className="page-link-custom page-link-active"
+          value='Home'
           onClick={handlePageChange}
         >
           <i className="fas fa-home"></i>
           Home
-        </div>
-        <div className="page-link-custom" onClick={handlePageChange}>
+        </button>
+        <button className="page-link-custom" value='Browse' onClick={handlePageChange}>
           <i className="fas fa-archive"></i>
           Browse
-        </div>
-        <div className="page-link-custom" onClick={handlePageChange}>
+        </button>
+        <button className="page-link-custom" value='Radio' onClick={handlePageChange}>
           <i className="fas fa-broadcast-tower"></i>
           Radio
-        </div>
+        </button>
       </div>
       <LibraryNav handlePageChange={handlePageChange} />
       {/* <button className="add-playlist-btn">
