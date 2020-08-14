@@ -1,19 +1,32 @@
 import React from "react";
 
-const LibraryNav = () => {
+import { playlists } from "../data/playlists";
+
+const LibraryNav = (props) => {
   return (
     <div className="lib-and-playlist-links">
       <div className="lib-links">
         <h3 className="library-header">YOUR LIBRARY</h3>
-        <a href="#">Made For You</a>
-        <a href="#">Recently Played</a>
-        <a href="#">Liked Songs</a>
-        <a href="#">Albums</a>
-        <a href="#">Artists</a>
-        <a href="#">Podcasts</a>
+        <button className="page-link">Made For You</button>
+        <button className="page-link">Recently Played</button>
+        <button className="page-link">Liked Songs</button>
+        <button className="page-link">Albums</button>
+        <button className="page-link">Artists</button>
+        <button className="page-link">Podcasts</button>
       </div>
       <div className="playlist-links">
         <h3 className="playlist-header">PLAYLISTS</h3>
+        {playlists.map((playlist) => {
+          return (
+            <button
+              key={playlist.id}
+              className="page-link"
+              onClick={props.handlePageChange}
+            >
+              {playlist.name}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

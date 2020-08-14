@@ -11,9 +11,9 @@ const Viewport = (props) => {
         {props.page === "Browse" ? (
           <Browse />
         ) : props.page === "Radio" ? (
-          <div>Radio</div>
+          <div style={{color: 'white'}}>{props.page}</div>
         ) : (
-          <div>Home</div>
+          <div style={{color: 'white'}}>{props.page}</div>
         )}
       </div>
     </div>

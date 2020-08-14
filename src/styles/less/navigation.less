@@ -34,7 +34,9 @@
   padding: 2% 0;
   display: flex;
   margin: 3.8% 0;
+  border: none;
   border-left: 4px solid transparent;
+  background-color: transparent;
   color: @light-gray;
   font-size: 1.4rem;
   font-weight: bold;
@@ -81,6 +83,10 @@
   .lib-links,
   .playlist-links {
     margin-bottom: 16%;
+
+    a:hover {
+      color: white;
+    }
   }
 }
 
@@ -110,6 +116,10 @@
 
   &:hover {
     color: white;
+
+    i {
+      background-color: white;
+    }
   }
 }
 

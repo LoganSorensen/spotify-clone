@@ -275,7 +275,9 @@ html {
   padding: 2% 0;
   display: flex;
   margin: 3.8% 0;
+  border: none;
   border-left: 4px solid transparent;
+  background-color: transparent;
   color: #b3b3b3;
   font-size: 1.4rem;
   font-weight: bold;
@@ -318,6 +320,10 @@ html {
 .lib-and-playlist-links .playlist-links {
   margin-bottom: 16%;
 }
+.lib-and-playlist-links .lib-links a:hover,
+.lib-and-playlist-links .playlist-links a:hover {
+  color: white;
+}
 .lib-and-playlist-links::-webkit-scrollbar {
   background-color: #121212;
 }
@@ -342,6 +348,9 @@ html {
 }
 .add-playlist-btn:hover {
   color: white;
+}
+.add-playlist-btn:hover i {
+  background-color: white;
 }
 .album-cover {
   width: 100%;
