@@ -1,9 +1,11 @@
 import React from "react";
 
+import SongList from '../songList';
+
 const Playlist = () => {
   return (
     <div className="playlist">
-      <div className="playlist-header">
+      <div className="playlist-page-header">
         <div className="playlist-img"></div>
         <div className="playlist-info">
             <p className='playlist-tag'>PLAYLIST</p>
@@ -21,6 +23,7 @@ const Playlist = () => {
           </div>
         </div>
       </div>
+      <SongList />
     </div>
   );
 };

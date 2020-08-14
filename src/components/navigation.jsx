@@ -1,15 +1,11 @@
 import React from "react";
 
-import PlaylistModal from './playlistModal';
+import PlaylistModal from "./playlistModal";
 import LibraryNav from "./libraryNav";
 
 const Navigation = (props) => {
   const handlePageChange = (e) => {
-    let pageName = e.target.value;
-    // pageName = pageName.split(">");
-    // console.log(pageName[pageName.length - 1]);
-    // console.log('value',e.target.value)
-
+    const pageName = e.target.value;
     props.changePage(pageName);
   };
 
@@ -32,26 +28,31 @@ const Navigation = (props) => {
       <div className="page-links">
         <button
           className="page-link-custom page-link-active"
-          value='Home'
+          value="Home"
           onClick={handlePageChange}
         >
           <i className="fas fa-home"></i>
           Home
         </button>
-        <button className="page-link-custom" value='Browse' onClick={handlePageChange}>
+        <button
+          className="page-link-custom"
+          value="Browse"
+          onClick={handlePageChange}
+        >
           <i className="fas fa-archive"></i>
           Browse
         </button>
-        <button className="page-link-custom" value='Radio' onClick={handlePageChange}>
+        <button
+          className="page-link-custom"
+          value="Radio"
+          onClick={handlePageChange}
+        >
           <i className="fas fa-broadcast-tower"></i>
           Radio
         </button>
       </div>
       <LibraryNav handlePageChange={handlePageChange} />
-      {/* <button className="add-playlist-btn">
-        <i className="fas fa-plus-circle"></i>New Playlist
-      </button> */}
-        <PlaylistModal />
+      <PlaylistModal />
       <div className="album-cover">
         <img
           src="https://source.unsplash.com/random/200x200"

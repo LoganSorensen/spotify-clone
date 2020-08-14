@@ -1,0 +1,103 @@
+.song-list {
+  padding: 0 2.2%;
+
+  input {
+    width: 100%;
+    border: none;
+    font-size: 1.45rem;
+    background-color: transparent;
+    margin-bottom: 1%;
+    padding: 0.5%;
+    color: white;
+
+    &:focus {
+      background-color: @gray;
+    }
+
+    &:hover::placeholder {
+      color: white;
+    }
+  }
+
+  p,
+  i {
+    margin: 0;
+    cursor: default;
+    &:hover {
+      color: white;
+    }
+  }
+  .categories {
+    color: @light-gray;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding-bottom: 0.4%;
+    border-bottom: 1px solid @dark-gray;
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    .title {
+      margin: 0 12% 0 7%;
+      padding-right: 18%;
+    }
+
+    .artist {
+      padding-right: 18%;
+    }
+
+    .album {
+      margin-right: 5.5%;
+      padding-right: 16%;
+    }
+
+    .date-added {
+      margin-right: 5%;
+      padding-right: 5%;
+    }
+
+    .length {
+      padding-right: 4%;
+    }
+  }
+
+  .song {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+    border-bottom: 1px solid @dark-gray;
+    padding: 0.8% 0;
+    &:hover {
+      background-color: #333333;
+    }
+
+    .title {
+      margin: 0 0 0 7%;
+      width: 32.3%;
+    }
+
+    .artist {
+      width: 21%;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .album {
+      width: 24.8%;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .date-added {
+      width: 12%;
+    }
+  }
+}

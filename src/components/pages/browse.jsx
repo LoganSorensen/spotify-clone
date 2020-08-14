@@ -3,24 +3,10 @@ import React from "react";
 import { genres } from "../../data/genres";
 
 const Browse = () => {
-  const test = document.querySelectorAll(".link");
-
-  const makeActive = (e) => {
-    console.log("hitting");
-    test.forEach((link) => {
-      link.classList.remove("active");
-    });
-    e.target.classList.add("active");
-  };
-
-  test.forEach((link) => {
-    link.addEventListener("click", makeActive);
-  });
-
   return (
     <div className="browse">
       <div className="top-section">
-        <h2 className='link'>Browse</h2>
+        <h2>Browse</h2>
         <nav>
           <div className="link active">GENRES &amp; MOODS</div>
           <div className="link">PODCASTS</div>
