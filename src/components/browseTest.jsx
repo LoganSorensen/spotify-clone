@@ -1,12 +1,12 @@
 import React from "react";
 
 const Categories = (props) => {
-  console.log(props.categories);
+//   console.log(props);
   return (
     <>
-      {props.categories.map((category) => {
+      {props.categories.map((category, index) => {
         return (
-          <div className="genre-card">
+          <div key={index} className="genre-card">
             <p>{category.name}</p>
             <img src={`${category.icons[0].url}`} alt="" />
           </div>

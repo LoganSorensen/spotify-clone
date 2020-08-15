@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import PlaylistModal from "./playlistModal";
 import LibraryNav from "./libraryNav";
 
+import { spotifyAPI } from "../utils/spotifyAPI";
+
 const Navigation = (props) => {
-  const handlePageChange = (e) => {
-    const pageName = e.target.value;
-    props.changePage(pageName);
-  };
+  const [playlists, setPlaylists] = useState();
+
+  useEffect(() => {
+    spotifyAPI()
+      .get("me/playlists")
+      .then((res) => {
+        console.log(res.data.items);
+        setPlaylists(res.data.items);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const links = document.querySelectorAll(".page-link-custom");
 
@@ -40,7 +51,7 @@ const Navigation = (props) => {
           Radio
         </Link>
       </div>
-      <LibraryNav handlePageChange={handlePageChange} />
+      {playlists !== undefined && <LibraryNav playlists={playlists} />}
       <PlaylistModal />
       <div className="album-cover">
         <img
