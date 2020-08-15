@@ -8,12 +8,12 @@ const LibraryNav = (props) => {
     <div className="lib-and-playlist-links">
       <div className="lib-links">
         <h3 className="library-header">YOUR LIBRARY</h3>
-        <Link className="page-link-custom">Made For You</Link>
-        <Link className="page-link-custom">Recently Played</Link>
-        <Link to='liked' className="page-link-custom">Liked Songs</Link>
-        <Link className="page-link-custom">Albums</Link>
-        <Link className="page-link-custom">Artists</Link>
-        <Link className="page-link-custom" value='Podcasts'>Podcasts</Link>
+        <Link to='/made-for-you' className="page-link-custom">Made For You</Link>
+        <Link to='/recently-played' className="page-link-custom">Recently Played</Link>
+        <Link to='/liked' className="page-link-custom">Liked Songs</Link>
+        <Link to='/albums' className="page-link-custom">Albums</Link>
+        <Link to='/artists' className="page-link-custom">Artists</Link>
+        <Link to='/podcasts' className="page-link-custom" value='Podcasts'>Podcasts</Link>
       </div>
       <div className="playlist-links">
         <h3 className="playlist-header">PLAYLISTS</h3>

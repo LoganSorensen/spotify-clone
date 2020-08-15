@@ -2,7 +2,8 @@ import React from "react";
 
 import SongList from '../songList';
 
-const Playlist = () => {
+const Playlist = (props) => {
+  // console.log('pl props', props)
   return (
     <div className="playlist">
       <div className="playlist-page-header">

@@ -133,6 +133,9 @@ html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
+body {
+  color: white;
+}
 .tooltip-custom {
   position: relative;
   display: inline-block;
@@ -191,7 +194,6 @@ html {
 .top-bar {
   background-color: #181818;
   height: 4.5vh;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -275,7 +277,7 @@ html {
 .page-link-custom {
   width: 100%;
   outline: 0;
-  padding: 4.8% 10%;
+  padding: 5.5% 10%;
   display: flex;
   border: none;
   border-left: 4px solid transparent;
@@ -310,18 +312,13 @@ html {
   padding: 2% 0 2% 0%;
 }
 .lib-and-playlist-links .page-link-custom {
-  padding: 3% 10%;
+  padding: 5.6% 8%;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 .lib-and-playlist-links h3 {
   padding-left: 10%;
-}
-.lib-and-playlist-links a {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 5.85% 0;
-}
-.lib-and-playlist-links h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   letter-spacing: 1px;
 }
 .lib-and-playlist-links .lib-links,
@@ -380,7 +377,6 @@ html {
 .friends-activity-bar h2 {
   font-size: 1.85rem;
   font-weight: bold;
-  color: white;
   border-bottom: 1px solid #282828;
   padding-bottom: 7%;
   margin-top: 19%;
@@ -486,7 +482,6 @@ html {
   text-decoration: underline;
 }
 .controls-bar .name-and-heart i {
-  color: white;
   font-size: 1.5rem;
 }
 .controls-bar .artist-name {
@@ -700,7 +695,6 @@ html {
 .song-list .song {
   display: flex;
   align-items: center;
-  color: white;
   font-size: 1.3rem;
   border-bottom: 1px solid #282828;
   padding: 0.8% 0;
@@ -737,7 +731,6 @@ html {
 .top-section h2 {
   font-size: 4rem;
   font-weight: bold;
-  color: white;
 }
 .top-section nav {
   margin: 2% 0 3%;
@@ -761,7 +754,6 @@ html {
   border-bottom: 1px solid #1ed760;
 }
 .top-section h3 {
-  color: white;
   font-weight: bold;
   font-size: 1.6rem;
   width: 100%;
@@ -793,10 +785,6 @@ html {
 .bottom-section .genre-card:hover p {
   border-color: white;
 }
-.bottom-section .genre-card p,
-.bottom-section .genre-card i {
-  color: white;
-}
 .bottom-section .genre-card i {
   font-size: 6rem;
   margin-bottom: 10%;
@@ -818,7 +806,6 @@ html {
   background-color: white;
 }
 .playlist-page-header .playlist-info {
-  color: white;
   margin: 5% 0 0 1.5%;
   width: 100%;
 }
@@ -864,9 +851,15 @@ html {
   border-radius: 20px;
   width: 65%;
   margin-right: 5%;
+  cursor: default;
 }
 .playlist-page-header .playlist-btns .play-btn:hover {
   transform: scale(1.07);
+  background-color: #1ed760;
+}
+.playlist-page-header .playlist-btns .play-btn:active {
+  transform: scale(1);
+  background-color: #1db954;
 }
 .playlist-page-header .playlist-btns .more-btn {
   border: 1px solid #b3b3b3;
@@ -888,7 +881,6 @@ html {
 .liked-songs-header h2 {
   font-size: 4.5rem;
   font-weight: bold;
-  color: white;
 }
 .liked-songs-header button {
   background-color: #1db954;
@@ -900,7 +892,13 @@ html {
   border-radius: 20px;
   letter-spacing: 1px;
   margin-top: 2%;
+  cursor: default;
 }
 .liked-songs-header button:hover {
   transform: scale(1.07);
+  background-color: #1ed760;
+}
+.liked-songs-header button:active {
+  transform: scale(1);
+  background-color: #1db954;
 }

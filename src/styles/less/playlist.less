@@ -15,7 +15,7 @@
   }
 
   .playlist-info {
-    color: white;
+    // color: white;
     margin: 5% 0 0 1.5%;
     width: 100%;
 
@@ -68,9 +68,16 @@
       border-radius: 20px;
       width: 65%;
       margin-right: 5%;
+      cursor: default;
 
       &:hover {
         transform: scale(1.07);
+        background-color: @green;
+      }
+
+      &:active {
+        transform: scale(1);
+        background-color: @green-alt;
       }
     }
 

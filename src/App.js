@@ -1,9 +1,12 @@
 import React, {useState} from "react";
+// import {Redirect} from 'react-router-dom';
 
 import Navigation from "./components/navigation";
 import Viewport from "./components/viewport";
 import FriendsActivity from "./components/friendsActivity";
 import ControlBar from "./components/controlBar";
+
+// import RedirectComp from './components/redirect';
 
 import "./styles/index.css"
 

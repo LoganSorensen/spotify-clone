@@ -14,9 +14,9 @@ const SongList = () => {
               <i className="far fa-calendar-plus date-added"></i>
               <i className="far fa-clock length"></i>
           </div>
-          {songs.map((song) => {
+          {songs.map((song, index) => {
               return (
-              <div className="song">
+              <div key={index} className="song">
                   <p className='title'>{song.title}</p>
                   <p className='artist'>{song.artist}</p>
                   <p className='album'>{song.album}</p>
