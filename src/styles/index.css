@@ -880,3 +880,27 @@ html {
 .playlist-page-header .playlist-btns .more-btn:hover {
   border-color: white;
 }
+.liked-songs-header {
+  padding: 3.1% 2.2% 2.2%;
+  background: #3e3e3e;
+  background: linear-gradient(180deg, #3e3e3e 0%, #181818 100%);
+}
+.liked-songs-header h2 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: white;
+}
+.liked-songs-header button {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.7% 2.7%;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-top: 2%;
+}
+.liked-songs-header button:hover {
+  transform: scale(1.07);
+}

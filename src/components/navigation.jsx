@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 import PlaylistModal from "./playlistModal";
 import LibraryNav from "./libraryNav";
@@ -26,30 +27,31 @@ const Navigation = (props) => {
     <div className="navigation-bar">
       <i className="fas fa-ellipsis-h"></i>
       <div className="page-links">
-        <button
+        <Link
           className="page-link-custom page-link-active"
-          value="Home"
-          onClick={handlePageChange}
+          // value="Home"
+          // onClick={handlePageChange}
         >
           <i className="fas fa-home"></i>
           Home
-        </button>
-        <button
+        </Link>
+        <Link
           className="page-link-custom"
-          value="Browse"
-          onClick={handlePageChange}
+          to='/browse'
+          // value="Browse"
+          // onClick={handlePageChange}
         >
           <i className="fas fa-archive"></i>
           Browse
-        </button>
-        <button
+        </Link>
+        <Link
           className="page-link-custom"
-          value="Radio"
-          onClick={handlePageChange}
+          // value="Radio"
+          // onClick={handlePageChange}
         >
           <i className="fas fa-broadcast-tower"></i>
           Radio
-        </button>
+        </Link>
       </div>
       <LibraryNav handlePageChange={handlePageChange} />
       <PlaylistModal />
