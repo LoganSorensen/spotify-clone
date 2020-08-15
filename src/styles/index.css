@@ -769,6 +769,7 @@ body {
   min-height: 100%;
 }
 .bottom-section .genre-card {
+  position: relative;
   border: 1px solid #b3b3b3;
   width: 210px;
   height: 210px;
@@ -785,12 +786,14 @@ body {
 .bottom-section .genre-card:hover p {
   border-color: white;
 }
-.bottom-section .genre-card i {
-  font-size: 6rem;
-  margin-bottom: 10%;
+.bottom-section .genre-card img {
+  max-width: 100%;
 }
 .bottom-section .genre-card p {
-  font-size: 1.8rem;
+  position: absolute;
+  top: 70%;
+  font-size: 1.5rem;
+  font-weight: bold;
   border-bottom: 1px solid transparent;
   padding-bottom: 1%;
 }
