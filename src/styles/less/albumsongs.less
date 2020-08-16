@@ -1,0 +1,56 @@
+.album-songs {
+  padding: 2.2% 2.2% 1.5%;
+  .categories {
+    color: @light-gray;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid @dark-gray;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding-bottom: 0.4%;
+
+    i {
+      font-size: 1.66rem;
+    }
+
+    .track-number {
+      margin: 0 5% 0 0.8%;
+    }
+
+    .title {
+      margin-right: 86%;
+    }
+
+    .length {
+      margin-right: 1.5%;
+    }
+  }
+
+  .tracks {
+    font-size: 1.5rem;
+    color: @light-gray;
+
+    .track {
+      display: flex;
+      padding: 1% 0;
+      border-bottom: 1px solid @dark-gray;
+      &:hover {
+        background-color: @gray;
+      }
+
+      .track-number {
+        margin-left: 0.7%;
+        width: 2.6%;
+      }
+
+      i {
+        margin-right: 2%;
+      }
+
+      .name {
+        color: white;
+        width: 86.5%;
+      }
+    }
+  }
+}

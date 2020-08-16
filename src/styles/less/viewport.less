@@ -60,6 +60,9 @@
       height: 100%;
       width: 100%;
       margin-right: 10%;
+      // color: white;
+      // font-size: 1.4rem;
+      cursor: default;
 
       &:hover span {
         text-decoration: underline;
@@ -67,6 +70,7 @@
 
       span {
         font-size: 1.4rem;
+        color: white;
       }
 
       .user-image-cont {
@@ -75,11 +79,17 @@
         width: 30px;
         margin-right: 2%;
         border-radius: 50px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          // border-radius: 50px;
+        }
       }
     }
 
     i {
-      color: @light-gray
+      color: @light-gray;
     }
   }
 }

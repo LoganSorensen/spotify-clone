@@ -1,0 +1,96 @@
+.album {
+  .album-page-header {
+    padding: 2.2%;
+    background: rgb(62, 62, 62);
+    background: linear-gradient(
+      180deg,
+      rgba(62, 62, 62, 1) 0%,
+      rgba(24, 24, 24, 1) 100%
+    );
+    display: flex;
+    // height: 30vh;
+  }
+
+  .image-cont {
+    width: 16%;
+    height: 220px;
+    background-color: white;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .album-info {
+    margin: 3.5% 0 0 1.5%;
+    color: @light-gray;
+    width: 50%;
+
+    .album-tag,
+    h2,
+    button {
+      color: white;
+    }
+
+    h2 {
+      font-size: 4.5rem;
+      font-weight: bold;
+      margin: 1% 0 2.5%;
+    }
+
+    a {
+      color: white;
+      margin-left: 1%;
+    }
+
+    .spacer {
+      margin: 0 0.5%;
+    }
+
+    p {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      margin: 1% 0;
+    }
+
+    .date-and-length {
+      display: flex;
+      align-items: center;
+    }
+
+    .album-btns {
+        // border: 1px solid red;
+      margin-top: 2%;
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        cursor: default;
+      }
+
+      .icon-btn {
+        border: 1px solid @light-gray;
+        border-radius: 50px;
+        background: transparent;
+        &:hover {
+          transform: scale(1.07);
+          border-color: white;
+        }
+      }
+
+      .play-btn {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 5% 20%;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .copyrights {
+      margin-left: 2.2%;
+      font-size: 1.2rem;
+      color: @light-gray;
+  }
+}

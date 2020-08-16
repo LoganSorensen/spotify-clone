@@ -178,6 +178,19 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #535353;
 }
+.green-btn {
+  color: white;
+  background-color: #1db954;
+  border: none;
+}
+.green-btn:hover {
+  background-color: #1ed760;
+  transform: scale(1.07);
+}
+.green-btn:active {
+  background-color: #1db954;
+  transform: scale(1);
+}
 .mid-section {
   display: flex;
   width: 100%;
@@ -231,12 +244,14 @@ body {
   height: 100%;
   width: 100%;
   margin-right: 10%;
+  cursor: default;
 }
 .top-bar .right-side .user:hover span {
   text-decoration: underline;
 }
 .top-bar .right-side .user span {
   font-size: 1.4rem;
+  color: white;
 }
 .top-bar .right-side .user .user-image-cont {
   background-color: white;
@@ -244,6 +259,10 @@ body {
   width: 30px;
   margin-right: 2%;
   border-radius: 50px;
+  overflow: hidden;
+}
+.top-bar .right-side .user .user-image-cont img {
+  width: 100%;
 }
 .top-bar .right-side i {
   color: #b3b3b3;
@@ -683,7 +702,7 @@ body {
 }
 .song-list .categories .album {
   margin-right: 5.5%;
-  padding-right: 16%;
+  padding-right: 14.6%;
 }
 .song-list .categories .date-added {
   margin-right: 5%;
@@ -702,26 +721,68 @@ body {
 .song-list .song:hover {
   background-color: #333333;
 }
+.song-list .song a {
+  color: white;
+}
 .song-list .song .title {
   margin: 0 0 0 7%;
-  width: 32.3%;
+  width: 32.7%;
 }
 .song-list .song .artist {
-  width: 21%;
-  cursor: pointer;
-}
-.song-list .song .artist:hover {
-  text-decoration: underline;
+  width: 21.5%;
 }
 .song-list .song .album {
-  width: 24.8%;
-  cursor: pointer;
-}
-.song-list .song .album:hover {
-  text-decoration: underline;
+  width: 23.5%;
 }
 .song-list .song .date-added {
   width: 12%;
+}
+.album-songs {
+  padding: 2.2% 2.2% 1.5%;
+}
+.album-songs .categories {
+  color: #b3b3b3;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #282828;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding-bottom: 0.4%;
+}
+.album-songs .categories i {
+  font-size: 1.66rem;
+}
+.album-songs .categories .track-number {
+  margin: 0 5% 0 0.8%;
+}
+.album-songs .categories .title {
+  margin-right: 86%;
+}
+.album-songs .categories .length {
+  margin-right: 1.5%;
+}
+.album-songs .tracks {
+  font-size: 1.5rem;
+  color: #b3b3b3;
+}
+.album-songs .tracks .track {
+  display: flex;
+  padding: 1% 0;
+  border-bottom: 1px solid #282828;
+}
+.album-songs .tracks .track:hover {
+  background-color: #404040;
+}
+.album-songs .tracks .track .track-number {
+  margin-left: 0.7%;
+  width: 2.6%;
+}
+.album-songs .tracks .track i {
+  margin-right: 2%;
+}
+.album-songs .tracks .track .name {
+  color: white;
+  width: 86.5%;
 }
 .top-section {
   padding: 8% 2% 0;
@@ -906,4 +967,78 @@ body {
 .liked-songs-header button:active {
   transform: scale(1);
   background-color: #1db954;
+}
+.album .album-page-header {
+  padding: 2.2%;
+  background: #3e3e3e;
+  background: linear-gradient(180deg, #3e3e3e 0%, #181818 100%);
+  display: flex;
+}
+.album .image-cont {
+  width: 16%;
+  height: 220px;
+  background-color: white;
+}
+.album .image-cont img {
+  width: 100%;
+}
+.album .album-info {
+  margin: 3.5% 0 0 1.5%;
+  color: #b3b3b3;
+  width: 50%;
+}
+.album .album-info .album-tag,
+.album .album-info h2,
+.album .album-info button {
+  color: white;
+}
+.album .album-info h2 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin: 1% 0 2.5%;
+}
+.album .album-info a {
+  color: white;
+  margin-left: 1%;
+}
+.album .album-info .spacer {
+  margin: 0 0.5%;
+}
+.album .album-info p {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin: 1% 0;
+}
+.album .album-info .date-and-length {
+  display: flex;
+  align-items: center;
+}
+.album .album-info .album-btns {
+  margin-top: 2%;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.album .album-info .album-btns button {
+  cursor: default;
+}
+.album .album-info .album-btns .icon-btn {
+  border: 1px solid #b3b3b3;
+  border-radius: 50px;
+  background: transparent;
+}
+.album .album-info .album-btns .icon-btn:hover {
+  transform: scale(1.07);
+  border-color: white;
+}
+.album .album-info .album-btns .play-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5% 20%;
+  border-radius: 20px;
+}
+.album .copyrights {
+  margin-left: 2.2%;
+  font-size: 1.2rem;
+  color: #b3b3b3;
 }

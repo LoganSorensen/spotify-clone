@@ -64,3 +64,18 @@ body {
 // background-color: @black;
 // }
 
+.green-btn {
+  color: white;
+  background-color: @green-alt;
+  border: none;
+  &:hover {
+    background-color: @green;
+    transform: scale(1.07);
+  }
+
+  &:active {
+    background-color: @green-alt;
+    transform: scale(1);
+  }
+}
+
