@@ -5,7 +5,7 @@ import { spotifyAPI } from "../utils/spotifyAPI";
 const Test = () => {
   const spotify = () => {
     spotifyAPI()
-      .get("tracks/2Cmr154R1u9JmkwaYEadPk")
+      .get("users/1241091914")
       .then((res) => {
         console.log("response from test: ", res);
       })
