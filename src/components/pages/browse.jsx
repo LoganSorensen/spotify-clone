@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import { genres } from "../../data/genres";
 import { spotifyAPI } from "../../utils/spotifyAPI";
-import Categories from "../browseTest";
+import Categories from "../categories";
 
 const Browse = () => {
   const [categories, setCategories] = useState();
@@ -34,21 +33,7 @@ const Browse = () => {
         <h3>Genres &amp; Moods</h3>
       </div>
       <div className="bottom-section">
-        {/* {genres.map((genre, index) => {
-          console.log(index)
-          return (
-            <div className="genre-card" key={index}>
-              <i className={genre.icon}></i>
-              <p>{genre.name}</p>
-            </div>
-          );
-        })} */}
-        {/* {categories.map((category) => {
-          return(
-            <div className="genre-card"></div>
-          )
-        })} */}
-        {categories !== undefined && <Categories categories={categories} />}
+        {categories && <Categories categories={categories} />}
       </div>
     </div>
   );

@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { playlists } from "../data/playlists";
-
 const LibraryNav = (props) => {
-  console.log("props", props.playlists);
+  // console.log("props", props.playlists);
   return (
     <div className="lib-and-playlist-links">
       <div className="lib-links">
@@ -31,9 +29,13 @@ const LibraryNav = (props) => {
       <div className="playlist-links">
         <h3 className="playlist-header">PLAYLISTS</h3>
         {props.playlists.map((playlist) => {
-          console.log(playlist.uri)
+          // console.log(playlist.id)
           return (
-            <Link key={playlist.id} className="page-link-custom" to="/playlist">
+            <Link
+              key={playlist.id}
+              className="page-link-custom"
+              to={`/playlist/${playlist.id}`}
+            >
               {playlist.name}
             </Link>
           );

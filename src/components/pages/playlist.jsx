@@ -1,30 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-import SongList from '../songList';
+import SongList from "../songList";
+
+import { spotifyAPI } from "../../utils/spotifyAPI";
 
 const Playlist = (props) => {
-  // console.log('pl props', props)
+  const params = useParams();
+  // console.log(params);
+
+  const [playlist, setPlaylist] = useState();
+  const [tracks, setTracks] = useState();
+
+  useEffect(() => {
+    spotifyAPI()
+      .get(`playlists/${params.id}`)
+      .then((res) => {
+        // console.log(res.data);
+        setPlaylist(res.data);
+        setTracks(res.data.tracks);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [params.id]);
+
   return (
     <div className="playlist">
       <div className="playlist-page-header">
-        <div className="playlist-img"></div>
+        <div className="playlist-img">
+          {playlist && (
+            <img src={playlist.images[1].url} alt="playlist cover" />
+          )}
+        </div>
         <div className="playlist-info">
-            <p className='playlist-tag'>PLAYLIST</p>
-          <h2>lofi</h2>
+          <p className="playlist-tag">PLAYLIST</p>
+          {playlist && <h2>{playlist.name}</h2>}
           <div className="creator-and-length">
-            <p>
-              Created by <span>Logan Sorensen</span>
-            </p>
-            <p className='spacer'>•</p>
-            <p>13 songs, 30 min</p>
+            {playlist && (
+              <p>
+                Created by <span>{playlist.owner.display_name}</span>
+              </p>
+            )}
+            <p className="spacer">•</p>
+            {tracks && <p>{tracks.total} songs, 30 min</p>}
           </div>
           <div className="playlist-btns">
-            <button className='play-btn'>PLAY</button>
-            <button className='more-btn'><i className="fas fa-ellipsis-h"></i></button>
+            <button className="play-btn">PLAY</button>
+            <button className="more-btn">
+              <i className="fas fa-ellipsis-h"></i>
+            </button>
           </div>
         </div>
       </div>
-      <SongList />
+      {tracks !== undefined && <SongList tracks={tracks} />}
     </div>
   );
 };

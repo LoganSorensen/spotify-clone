@@ -18,6 +18,9 @@ const Viewport = (props) => {
       <Route exact path='/browse' component={Browse} />
       <Route exact path='/liked' component={LikedSongs} />
       <Route exact path='/playlist' component={Playlist} />
+      <Route path='/playlist/:id'>
+        <Playlist />
+      </Route>
         {/* {props.page === "Browse" ? (
           <Browse />
         ) : props.page === "Radio" ? (

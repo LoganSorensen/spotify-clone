@@ -1,26 +1,25 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import { playlists } from "../data/playlists";
 
 const PlaylistModal = () => {
-  const [formData, setFormData] = useState({
-    id: playlists.length + 1,
-    name: `My playlist #${playlists.length + 1}`,
-    description: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   id: playlists.length + 1,
+  //   name: `My playlist #${playlists.length + 1}`,
+  //   description: "",
+  // });
 
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
   
   const handleChange = (e) => {
-    console.log(e.target.name,e.target.value)
-    setFormData({...formData, [e.target.name]: e.target.value})
+  //   console.log(e.target.name,e.target.value)
+  //   setFormData({...formData, [e.target.name]: e.target.value})
   }
 
   const createPlaylist = (e) => {
     e.preventDefault();
-    playlists.push(formData);
+    // playlists.push(formData);
   };
 
   return (
@@ -42,7 +41,7 @@ const PlaylistModal = () => {
                   type="text"
                   id="playlist-name"
                   name="name"
-                  placeholder={`My playlist #${playlists.length + 1}`}
+                  placeholder={`My playlist #1`}
                   onChange={handleChange}
                 />
                 <label htmlFor="playlist-desc">Description</label>

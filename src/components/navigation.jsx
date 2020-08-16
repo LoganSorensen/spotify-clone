@@ -13,7 +13,7 @@ const Navigation = (props) => {
     spotifyAPI()
       .get("me/playlists")
       .then((res) => {
-        console.log(res.data.items);
+        // console.log(res.data.items);
         setPlaylists(res.data.items);
       })
       .catch((err) => {

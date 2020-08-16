@@ -803,9 +803,12 @@ body {
   display: flex;
 }
 .playlist-page-header .playlist-img {
-  width: 270px;
+  width: 280px;
   height: 220px;
   background-color: white;
+}
+.playlist-page-header .playlist-img img {
+  width: 100%;
 }
 .playlist-page-header .playlist-info {
   margin: 5% 0 0 1.5%;
