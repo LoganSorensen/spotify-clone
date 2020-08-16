@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import TopBar from "./topBar";
 import Browse from "./pages/browse";
 import Playlist from "./pages/playlist";
-import LikedSongs from "./pages/likedSongs";
+// import LikedSongs from "./pages/likedSongs";
 import User from "./pages/user";
 import Album from "./pages/album"
 
