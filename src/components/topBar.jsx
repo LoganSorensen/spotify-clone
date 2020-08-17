@@ -17,7 +17,6 @@ const TopBar = (props) => {
           </div>
           <span>{props.name}</span>
         </Link>
-
         <i className="fas fa-chevron-down tooltip-custom">
           <span className="tooltiptext-bottom">Menu</span>
         </i>

@@ -4,7 +4,6 @@ import { Route } from "react-router-dom";
 import TopBar from "./topBar";
 import Browse from "./pages/browse";
 import Playlist from "./pages/playlist";
-// import LikedSongs from "./pages/likedSongs";
 import User from "./pages/user";
 import Album from "./pages/album";
 
@@ -15,10 +14,9 @@ const Viewport = (props) => {
     <div className="viewport">
       <TopBar />
       <div className="view-content">
-        <Route exact path="/" component={Test} />
+        <Route exact path="/home" component={Test} />
         <Route exact path="/user" component={User} />
         <Route exact path="/browse" component={Browse} />
-        {/* <Route exact path="/liked" component={LikedSongs} /> */}
         <Route exact path="/playlist" component={Playlist} />
         <Route path="/playlist/:id">
           <Playlist />

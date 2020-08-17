@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const LibraryNav = (props) => {
+  const truncateStr = (str) => {
+    const length = 21;
+    return str.length > length ? str.substr(0, length - 1) + "..." : str;
+  };
+
   return (
     <div className="lib-and-playlist-links">
       <div className="lib-links">
@@ -34,7 +39,7 @@ const LibraryNav = (props) => {
               className="page-link-custom"
               to={`/playlist/${playlist.id}`}
             >
-              {playlist.name}
+              {truncateStr(playlist.name)}
             </Link>
           );
         })}
