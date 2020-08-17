@@ -16,8 +16,8 @@ const SongList = (props) => {
 
   const truncateStr = (str) => {
     const length = 60;
-    return (str.length > length) ? str.substr(0, length-1) + '...' : str;
-  }
+    return str.length > length ? str.substr(0, length - 1) + "..." : str;
+  };
 
   return (
     <div className="song-list">

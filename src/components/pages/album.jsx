@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import AlbumSongs from "../albumSongs";
+import MoreAlbums from "../moreAlbums";
 
 import { spotifyAPI } from "../../utils/spotifyAPI";
 
@@ -10,13 +11,16 @@ const Album = () => {
 
   const [album, setAlbum] = useState();
   const [tracks, setTracks] = useState();
+  const [artist, setArtist] = useState();
 
   useEffect(() => {
     spotifyAPI()
       .get(`/albums/${params.id}`)
       .then((res) => {
+        console.log(res.data)
         setAlbum(res.data);
         setTracks(res.data.tracks.items);
+        setArtist(res.data.artists[0])
       })
       .catch((err) => {
         console.log(err);
@@ -54,7 +58,7 @@ const Album = () => {
 
   return (
     <>
-      {album && (
+      {album && artist && (
         <div className="album">
           <div className="album-page-header">
             <div className="image-cont">
@@ -87,6 +91,11 @@ const Album = () => {
           </div>
           {tracks && <AlbumSongs tracks={tracks} />}
           <p className="copyrights">{getCopyright(album.copyrights)}</p>
+          <div className="more-albums">
+
+          <h4>More by {artist.name}</h4>
+          <MoreAlbums name={album.name} id={artist.id} />
+          </div>
         </div>
       )}
     </>
