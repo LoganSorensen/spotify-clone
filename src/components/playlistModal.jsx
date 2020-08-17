@@ -1,25 +1,38 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { connect } from "react-redux";
 
-const PlaylistModal = () => {
-  // const [formData, setFormData] = useState({
-  //   id: playlists.length + 1,
-  //   name: `My playlist #${playlists.length + 1}`,
-  //   description: "",
-  // });
+import { spotifyAPI } from "../utils/spotifyAPI";
+
+const PlaylistModal = (props) => {
+  const [formData, setFormData] = useState({
+    name: `My playlist #${props.length + 1}`,
+    description: "",
+  });
 
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
 
   const handleChange = (e) => {
-    //   console.log(e.target.name,e.target.value)
-    //   setFormData({...formData, [e.target.name]: e.target.value})
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const createPlaylist = (e) => {
     e.preventDefault();
-    // playlists.push(formData);
+    console.log(formData);
+    
+    spotifyAPI()
+      .post(`users/${props.id}/playlists`, formData)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    toggle();
+    setFormData({ name: `My playlist #${props.length + 1}`, description: "" });
   };
 
   return (
@@ -41,7 +54,7 @@ const PlaylistModal = () => {
                   type="text"
                   id="playlist-name"
                   name="name"
-                  placeholder={`My playlist #1`}
+                  placeholder={`My playlist #${props.length + 1}`}
                   onChange={handleChange}
                 />
                 <label htmlFor="playlist-desc">Description</label>
@@ -63,4 +76,10 @@ const PlaylistModal = () => {
   );
 };
 
-export default PlaylistModal;
+const mapStateToProps = (state) => {
+  return {
+    id: state.setUser.id,
+  };
+};
+
+export default connect(mapStateToProps, {})(PlaylistModal);

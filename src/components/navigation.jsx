@@ -50,8 +50,12 @@ const Navigation = (props) => {
           Radio
         </Link>
       </div>
-      {playlists !== undefined && <LibraryNav playlists={playlists} />}
-      <PlaylistModal />
+      {playlists !== undefined && (
+        <>
+      <LibraryNav playlists={playlists} />
+      <PlaylistModal length={playlists.length} />
+      </>
+      )}
     </div>
   );
 };

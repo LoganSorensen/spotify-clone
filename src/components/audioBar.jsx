@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 
 const AudioBar = (props) => {
-  console.log(props.id);
   return (
     <div className="audio-bar">
       {props.id && (
@@ -19,7 +18,6 @@ const AudioBar = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log("state", state);
   return {
     id: state.setCurrentSong.id,
   };

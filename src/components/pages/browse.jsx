@@ -10,7 +10,6 @@ const Browse = () => {
     spotifyAPI()
       .get("browse/categories")
       .then((res) => {
-        console.log(res.data.categories.items[0].icons[0].url);
         setCategories(res.data.categories.items);
       })
       .catch((err) => {

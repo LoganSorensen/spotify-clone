@@ -29,7 +29,7 @@ const Playlist = (props) => {
     <div className="playlist">
       <div className="playlist-page-header">
         <div className="playlist-img">
-          {playlist && (
+          {playlist && playlist.images.length !== 0 && (
             <img src={playlist.images[1].url} alt="playlist cover" />
           )}
         </div>

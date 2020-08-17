@@ -1,36 +1,41 @@
-import React, { useState } from "react";
-// import {Redirect} from 'react-router-dom';
+import React, { useEffect } from "react";
+import {connect} from 'react-redux'
 
 import Navigation from "./components/navigation";
 import Viewport from "./components/viewport";
 import FriendsActivity from "./components/friendsActivity";
-// import ControlBar from "./components/controlBar";
 import AudioBar from "./components/audioBar";
 
-// import RedirectComp from './components/redirect';
+import {setUser} from './actions/setUserActions'
+
+import {spotifyAPI} from './utils/spotifyAPI'
 
 import "./styles/index.css";
 
-function App() {
-  const [page, setPage] = useState("Playlist");
 
-  const changePage = (page) => {
-    console.log(page);
-    console.log("page changed to", page);
-    setPage(page);
-  };
+function App(props) {
+useEffect(() => {
+  spotifyAPI()
+    .get("me")
+    .then((res) => {
+      props.setUser(res.data)
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}, [props]);
 
   return (
     <div className="App">
       <div className="mid-section">
-        <Navigation changePage={changePage} />
-        <Viewport page={page} />
+        <Navigation />
+        <Viewport />
         <FriendsActivity />
       </div>
-      {/* <ControlBar /> */}
+
       <AudioBar />
     </div>
   );
 }
 
-export default App;
+export default connect(null, {setUser})(App);
