@@ -4,10 +4,8 @@ import { connect } from "react-redux";
 import { setCurrentSong } from "../actions/setCurrentSongActions";
 
 const AlbumSongs = (props) => {
-  // console.log('album songs props: ', props.tracks)
   const handleClick = (track) => {
     props.setCurrentSong(track);
-    // console.log(track)
   };
 
   return (

@@ -13,7 +13,6 @@ const Navigation = (props) => {
     spotifyAPI()
       .get("me/playlists")
       .then((res) => {
-        // console.log(res.data.items);
         setPlaylists(res.data.items);
       })
       .catch((err) => {
@@ -53,12 +52,6 @@ const Navigation = (props) => {
       </div>
       {playlists !== undefined && <LibraryNav playlists={playlists} />}
       <PlaylistModal />
-      {/* <div className="album-cover">
-        <img
-          src="https://source.unsplash.com/random/200x200"
-          alt="album cover art"
-        />
-      </div> */}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import Browse from "./pages/browse";
 import Playlist from "./pages/playlist";
 // import LikedSongs from "./pages/likedSongs";
 import User from "./pages/user";
-import Album from "./pages/album"
+import Album from "./pages/album";
 
 import Test from "./test";
 

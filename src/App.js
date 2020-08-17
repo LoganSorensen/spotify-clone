@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 // import {Redirect} from 'react-router-dom';
 
 import Navigation from "./components/navigation";
@@ -9,17 +9,16 @@ import AudioBar from "./components/audioBar";
 
 // import RedirectComp from './components/redirect';
 
-import "./styles/index.css"
+import "./styles/index.css";
 
 function App() {
-
-const [page, setPage] = useState("Playlist")
+  const [page, setPage] = useState("Playlist");
 
   const changePage = (page) => {
-    console.log(page)
-    console.log('page changed to', page)
-    setPage(page)
-  }
+    console.log(page);
+    console.log("page changed to", page);
+    setPage(page);
+  };
 
   return (
     <div className="App">
@@ -29,7 +28,7 @@ const [page, setPage] = useState("Playlist")
         <FriendsActivity />
       </div>
       {/* <ControlBar /> */}
-      <AudioBar  />
+      <AudioBar />
     </div>
   );
 }

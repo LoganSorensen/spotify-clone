@@ -31,7 +31,7 @@ const User = () => {
             </div>
           </div>
           <nav>
-            <Link className='active'>OVERVIEW</Link>
+            <Link className="active">OVERVIEW</Link>
             <Link>RECENTLY PLAYED ARTISTS</Link>
             <Link>PUBLIC PLAYLISTS</Link>
             <Link>FOLLOWING</Link>

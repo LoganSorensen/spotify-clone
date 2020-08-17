@@ -1,7 +1,6 @@
 import React from "react";
 
 const Categories = (props) => {
-//   console.log(props);
   return (
     <>
       {props.categories.map((category, index) => {

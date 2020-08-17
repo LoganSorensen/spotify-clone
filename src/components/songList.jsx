@@ -5,16 +5,12 @@ import { connect } from "react-redux";
 import { setCurrentSong } from "../actions/setCurrentSongActions";
 
 const SongList = (props) => {
-  // console.log("songs", props.tracks);
-  // console.log(props.tracks.items[0].track);
-
   const getDate = (date) => {
     const dateArray = date.split("T");
     return dateArray[0];
   };
 
   const handleClick = (track) => {
-    // console.log(track)
     props.setCurrentSong(track.track);
   };
 
@@ -30,7 +26,6 @@ const SongList = (props) => {
           <i className="far fa-clock length"></i>
         </div>
         {props.tracks.items.map((track, index) => {
-          // console.log("track in song list: ", track.track.album.id);
           return (
             <div key={index} className="song">
               <i

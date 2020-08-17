@@ -5,18 +5,30 @@ const ControlBar = () => {
     <div className="controls-bar">
       <div className="song-info">
         <div className="name-and-heart">
-          <a href="#" className="song-name">Are You What You Want To Be?</a>
-        <i className="far fa-heart tooltip-custom"></i>
+          <a href="#" className="song-name">
+            Are You What You Want To Be?
+          </a>
+          <i className="far fa-heart tooltip-custom"></i>
         </div>
-          <a href="#" className="artist-name">Foster The People</a>
+        <a href="#" className="artist-name">
+          Foster The People
+        </a>
       </div>
       <div className="controls">
         <div className="buttons">
-        <i className="fas fa-random tooltip-custom"><span className="tooltiptext-bottom">Shuffle</span></i>
-        <i className="fas fa-step-backward tooltip-custom"><span className="tooltiptext-bottom">Previous</span></i>
-        <i className="far fa-play-circle tooltip-custom"></i>
-        <i className="fas fa-step-forward tooltip-custom"><span className="tooltiptext-bottom">Next</span></i>
-        <i className="fas fa-redo-alt tooltip-custom"><span className="tooltiptext-bottom">Repeat</span></i>
+          <i className="fas fa-random tooltip-custom">
+            <span className="tooltiptext-bottom">Shuffle</span>
+          </i>
+          <i className="fas fa-step-backward tooltip-custom">
+            <span className="tooltiptext-bottom">Previous</span>
+          </i>
+          <i className="far fa-play-circle tooltip-custom"></i>
+          <i className="fas fa-step-forward tooltip-custom">
+            <span className="tooltiptext-bottom">Next</span>
+          </i>
+          <i className="fas fa-redo-alt tooltip-custom">
+            <span className="tooltiptext-bottom">Repeat</span>
+          </i>
         </div>
       </div>
       <div className="queue-and-audio">

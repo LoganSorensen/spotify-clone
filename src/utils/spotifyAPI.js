@@ -3,8 +3,6 @@ import axios from "axios";
 export const spotifyAPI = () => {
   const token = localStorage.getItem("spotifyToken");
 
-  
-
   return axios.create({
     headers: {
       authorization: `Bearer ${token}`,

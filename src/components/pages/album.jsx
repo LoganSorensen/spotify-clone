@@ -15,7 +15,6 @@ const Album = () => {
     spotifyAPI()
       .get(`/albums/${params.id}`)
       .then((res) => {
-        // console.log(res.data);
         setAlbum(res.data);
         setTracks(res.data.tracks.items);
       })
@@ -87,7 +86,7 @@ const Album = () => {
             </div>
           </div>
           {tracks && <AlbumSongs tracks={tracks} />}
-          <p className='copyrights'>{getCopyright(album.copyrights)}</p>
+          <p className="copyrights">{getCopyright(album.copyrights)}</p>
         </div>
       )}
     </>
