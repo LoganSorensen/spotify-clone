@@ -27,7 +27,7 @@ const AlbumSongs = (props) => {
               <p className="track-number">{track.track_number}</p>
               <i className="far fa-heart"></i>
               <p className="name">{track.name}</p>
-              <p>{track.duration_ms}</p>
+              <p className='length'>{track.duration_ms}</p>
             </div>
           );
         })}

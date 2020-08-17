@@ -711,9 +711,9 @@ body {
 .song-list .song {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   border-bottom: 1px solid #282828;
-  padding: 0.7% 0;
+  padding: 0.6% 0;
 }
 .song-list .song:hover {
   background-color: #333333;
@@ -744,6 +744,10 @@ body {
 }
 .song-list .song .date-added {
   width: 12%;
+}
+.song-list .song .date-added,
+.song-list .song .length {
+  color: #b3b3b3;
 }
 .album-songs {
   padding: 2.2% 2.2% 1.5%;
@@ -810,6 +814,9 @@ body {
 .album-songs .tracks .track .name {
   color: white;
   width: 86.5%;
+}
+.album-songs .tracks .track .length {
+  color: #b3b3b3;
 }
 .top-section {
   padding: 8% 2% 0;
