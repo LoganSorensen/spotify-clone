@@ -69,9 +69,22 @@
     align-items: center;
     font-size: 1.3rem;
     border-bottom: 1px solid @dark-gray;
-    padding: 0.8% 0;
+    padding: 0.7% 0;
     &:hover {
       background-color: #333333;
+
+      i {
+        visibility: visible;
+      }
+    }
+
+    i {
+      visibility: hidden;
+      font-size: 2.2rem;
+      margin-left: 1%;
+      &:hover {
+        transform: scale(1.07);
+      }
     }
 
     a {
@@ -79,7 +92,7 @@
     }
 
     .title {
-      margin: 0 0 0 7%;
+      margin: 0 0 0 4.4%;
       width: 32.7%;
     }
 

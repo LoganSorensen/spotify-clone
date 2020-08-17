@@ -1,7 +1,9 @@
 import {combineReducers} from 'redux'
 
-const rootReducer = combineReducers({
+import {setCurrentSong} from './setCurrentSongReducer'
 
+const rootReducer = combineReducers({
+    setCurrentSong,
 })
 
 export default rootReducer;

@@ -323,7 +323,7 @@ body {
 }
 .lib-and-playlist-links {
   border-bottom: 1px solid #282828;
-  height: 72%;
+  height: 71.7%;
   overflow-y: scroll;
   padding: 2% 0 2% 0%;
 }
@@ -713,16 +713,27 @@ body {
   align-items: center;
   font-size: 1.3rem;
   border-bottom: 1px solid #282828;
-  padding: 0.8% 0;
+  padding: 0.7% 0;
 }
 .song-list .song:hover {
   background-color: #333333;
+}
+.song-list .song:hover i {
+  visibility: visible;
+}
+.song-list .song i {
+  visibility: hidden;
+  font-size: 2.2rem;
+  margin-left: 1%;
+}
+.song-list .song i:hover {
+  transform: scale(1.07);
 }
 .song-list .song a {
   color: white;
 }
 .song-list .song .title {
-  margin: 0 0 0 7%;
+  margin: 0 0 0 4.4%;
   width: 32.7%;
 }
 .song-list .song .artist {
@@ -763,12 +774,31 @@ body {
   color: #b3b3b3;
 }
 .album-songs .tracks .track {
+  position: relative;
   display: flex;
   padding: 1% 0;
   border-bottom: 1px solid #282828;
 }
 .album-songs .tracks .track:hover {
   background-color: #404040;
+}
+.album-songs .tracks .track:hover .fa-play-circle {
+  visibility: visible;
+}
+.album-songs .tracks .track:hover .track-number {
+  visibility: hidden;
+}
+.album-songs .tracks .track .fa-play-circle {
+  visibility: hidden;
+  position: absolute;
+  right: 95.8%;
+  bottom: 25%;
+  font-size: 2.2rem;
+  margin-left: 1%;
+  color: white;
+}
+.album-songs .tracks .track .fa-play-circle:hover {
+  transform: scale(1.07);
 }
 .album-songs .tracks .track .track-number {
   margin-left: 0.7%;
@@ -1094,6 +1124,7 @@ body {
 .audio-bar {
   height: 9.3vh;
   width: 100%;
+  background-color: #181818;
 }
 .audio-bar iframe {
   height: 100%;

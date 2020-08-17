@@ -31,11 +31,33 @@
     color: @light-gray;
 
     .track {
+      position: relative;
       display: flex;
       padding: 1% 0;
       border-bottom: 1px solid @dark-gray;
       &:hover {
         background-color: @gray;
+
+        .fa-play-circle {
+          visibility: visible;
+        }
+
+        .track-number {
+          visibility: hidden;
+        }
+      }
+
+      .fa-play-circle {
+        visibility: hidden;
+        position: absolute;
+        right: 95.8%;
+        bottom: 25%;
+        font-size: 2.2rem;
+        margin-left: 1%;
+        color: white;
+        &:hover {
+          transform: scale(1.07);
+        }
       }
 
       .track-number {

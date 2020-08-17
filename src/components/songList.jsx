@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+
+import { setCurrentSong } from "../actions/setCurrentSongActions";
 
 const SongList = (props) => {
   // console.log("songs", props.tracks);
@@ -11,8 +14,9 @@ const SongList = (props) => {
   };
 
   const handleClick = (track) => {
-    console.log(track)
-  }
+    // console.log(track)
+    props.setCurrentSong(track.track);
+  };
 
   return (
     <div className="song-list">
@@ -28,14 +32,18 @@ const SongList = (props) => {
         {props.tracks.items.map((track, index) => {
           // console.log("track in song list: ", track.track.album.id);
           return (
-            <div key={index} className="song" onClick={() => handleClick(track)}>
+            <div key={index} className="song">
+              <i
+                className="far fa-play-circle"
+                onClick={() => handleClick(track)}
+              ></i>
               <p className="title">{track.track.name}</p>
               <p className="artist">{track.track.artists[0].name}</p>
-                <p className="album">
-              <Link to={`/album/${track.track.album.id}`}>
+              <p className="album">
+                <Link to={`/album/${track.track.album.id}`}>
                   {track.track.album.name}
-              </Link>
-                  </p>
+                </Link>
+              </p>
               <p className="date-added">{getDate(track.added_at)}</p>
               <p className="length">{track.track.duration_ms}</p>
             </div>
@@ -46,4 +54,4 @@ const SongList = (props) => {
   );
 };
 
-export default SongList;
+export default connect(null, { setCurrentSong })(SongList);

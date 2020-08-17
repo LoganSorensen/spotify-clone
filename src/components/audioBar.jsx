@@ -1,17 +1,28 @@
 import React from "react";
+import {connect} from 'react-redux'
 
-const AudioBar = () => {
+const AudioBar = (props) => {
+  console.log(props.id)
   return (
     <div className="audio-bar">
-      <iframe
-        src="https://open.spotify.com/embed?uri=spotify%3Atrack%3A7cDlVNC3d0RRW4p2qmiMLm"
+      {props.id && (
+        <iframe
+        src={`https://open.spotify.com/embed/track/${props.id}`}
         frameBorder="0"
         allowtransparency="true"
         allow="encrypted-media"
         title="spotifyPlayer"
-      ></iframe>
+        ></iframe>
+        )}
     </div>
   );
 };
 
-export default AudioBar;
+const mapStateToProps = state => {
+  console.log('state', state)
+  return {
+    id: state.setCurrentSong.id
+  }
+}
+
+export default connect (mapStateToProps, {})(AudioBar);
