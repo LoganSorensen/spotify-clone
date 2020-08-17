@@ -290,9 +290,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-.page-links {
-  height: 16.4%;
-}
 .page-link-custom {
   width: 100%;
   outline: 0;
@@ -326,7 +323,7 @@ body {
 }
 .lib-and-playlist-links {
   border-bottom: 1px solid #282828;
-  height: 45.4%;
+  height: 72%;
   overflow-y: scroll;
   padding: 2% 0 2% 0%;
 }
@@ -1093,4 +1090,12 @@ body {
 .user .user-header nav .active {
   border-bottom: 2px solid #1ed760;
   color: white;
+}
+.audio-bar {
+  height: 9.3vh;
+  width: 100%;
+}
+.audio-bar iframe {
+  height: 100%;
+  width: 100%;
 }

@@ -4,7 +4,8 @@ import React, {useState} from "react";
 import Navigation from "./components/navigation";
 import Viewport from "./components/viewport";
 import FriendsActivity from "./components/friendsActivity";
-import ControlBar from "./components/controlBar";
+// import ControlBar from "./components/controlBar";
+import AudioBar from "./components/audioBar";
 
 // import RedirectComp from './components/redirect';
 
@@ -27,7 +28,8 @@ const [page, setPage] = useState("Playlist")
         <Viewport page={page} />
         <FriendsActivity />
       </div>
-      <ControlBar />
+      {/* <ControlBar /> */}
+      <AudioBar  />
     </div>
   );
 }

@@ -53,12 +53,12 @@ const Navigation = (props) => {
       </div>
       {playlists !== undefined && <LibraryNav playlists={playlists} />}
       <PlaylistModal />
-      <div className="album-cover">
+      {/* <div className="album-cover">
         <img
           src="https://source.unsplash.com/random/200x200"
           alt="album cover art"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

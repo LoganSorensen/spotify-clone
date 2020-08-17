@@ -10,6 +10,10 @@ const SongList = (props) => {
     return dateArray[0];
   };
 
+  const handleClick = (track) => {
+    console.log(track)
+  }
+
   return (
     <div className="song-list">
       <input type="text" placeholder="Filter" />
@@ -24,7 +28,7 @@ const SongList = (props) => {
         {props.tracks.items.map((track, index) => {
           // console.log("track in song list: ", track.track.album.id);
           return (
-            <div key={index} className="song">
+            <div key={index} className="song" onClick={() => handleClick(track)}>
               <p className="title">{track.track.name}</p>
               <p className="artist">{track.track.artists[0].name}</p>
                 <p className="album">
