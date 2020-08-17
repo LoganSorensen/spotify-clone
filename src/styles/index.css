@@ -414,6 +414,7 @@ body {
 .friends-activity-bar .friend {
   color: #b3b3b3;
   width: 81%;
+  margin-left: 8%;
 }
 .friends-activity-bar .friend h4:hover,
 .friends-activity-bar .friend p:hover {
@@ -443,7 +444,7 @@ body {
   margin-right: 2%;
 }
 .friends-activity-bar .friend p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .friends-activity-bar .friend > * {
   margin: 2.9% 0;

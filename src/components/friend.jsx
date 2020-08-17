@@ -6,13 +6,14 @@ const Friend = () => {
       <div className="friend-icon"></div>
       <div className="friend">
         <div className="name-and-time">
-          <h4 className="friend-name">Connor Sorensen</h4>
+          <h4 className="friend-name">Friend Name</h4>
           <span className="active-time">5h</span>
         </div>
-        <p className="song-name">Let Me Down (feat. blink...)</p>
-        <p className="artist-name">Oliver Tree</p>
+        <p className="song-name">Song Name</p>
+        <p className="artist-name">Artist Name</p>
         <p className="album-name">
-          <i className="fas fa-record-vinyl"></i>Let Me Down (feat. b...
+          <i className="fas fa-record-vinyl"></i>
+          Album Name
         </p>
       </div>
     </div>
