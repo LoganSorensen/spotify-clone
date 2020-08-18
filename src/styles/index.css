@@ -750,6 +750,22 @@ body {
 .song-list .song .length {
   color: #b3b3b3;
 }
+.song-list .no-results {
+  display: flex;
+  font-size: 1.4rem;
+  margin-top: 1%;
+  color: #b3b3b3;
+}
+.song-list .no-results button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-left: 1%;
+  cursor: default;
+}
+.song-list .no-results button:hover {
+  text-decoration: underline;
+}
 .album-songs {
   padding: 2.2% 2.2% 1.5%;
 }

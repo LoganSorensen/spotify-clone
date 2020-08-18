@@ -27,6 +27,7 @@
       color: white;
     }
   }
+
   .categories {
     color: @light-gray;
     display: flex;
@@ -110,6 +111,24 @@
 
     .date-added, .length {
       color: @light-gray;
+    }
+  }
+
+  .no-results {
+    display: flex;
+    font-size: 1.4rem;
+    margin-top: 1%;
+    color: @light-gray;
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      margin-left: 1%;
+      cursor: default;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

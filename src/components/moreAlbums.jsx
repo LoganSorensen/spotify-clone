@@ -30,11 +30,11 @@ const MoreAlbums = ({ id, name }) => {
   return (
     <div className="album-list">
       {albums &&
-        filterAlbums(albums).map((album) => {
+        filterAlbums(albums).map((album, index) => {
           filterAlbums(albums);
-          console.log(album);
+          // console.log(album);
           return (
-            <div className="album">
+            <div key={index} className="album">
               <Link to={`/album/${album.id}`}>
                 <div className="image-cont">
                   <img src={album.images[1].url} alt="album cover" />
