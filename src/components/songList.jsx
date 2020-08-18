@@ -18,9 +18,7 @@ const SongList = (props) => {
         item.track.album.name.toLowerCase().includes(query.toLowerCase())
     );
     setData(results);
-  }, [query]);
-
-  // console.log("songlist props: ", props.tracks.items);
+  }, [query, props.tracks.items]);
 
   const filterSongs = (e) => {
     setQuery(e.target.value);
@@ -83,7 +81,7 @@ const SongList = (props) => {
           })
         ) : data.length === 0 && query !== "" ? (
           // renders if there are no matches for the search
-          <div className='no-results'>
+          <div className="no-results">
             <p>No results for "{query}".</p>
             <button className="remove-filter" onClick={removeFilter}>
               Remove Filter

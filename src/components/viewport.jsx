@@ -6,6 +6,7 @@ import Browse from "./pages/browse";
 import Playlist from "./pages/playlist";
 import User from "./pages/user";
 import Album from "./pages/album";
+import Category from './pages/category';
 
 import Test from "./test";
 
@@ -18,6 +19,9 @@ const Viewport = (props) => {
         <Route exact path="/user" component={User} />
         <Route exact path="/browse" component={Browse} />
         <Route exact path="/playlist" component={Playlist} />
+        <Route exact path='/category/:id'>
+          <Category />
+        </Route>
         <Route path="/playlist/:id">
           <Playlist />
         </Route>

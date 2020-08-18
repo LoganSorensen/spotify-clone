@@ -915,6 +915,7 @@ body {
   min-height: 100%;
 }
 .bottom-section .genre-card {
+  color: white;
   position: relative;
   width: 210px;
   height: 210px;
@@ -930,6 +931,10 @@ body {
 }
 .bottom-section .genre-card:hover p {
   border-color: white;
+}
+.bottom-section .genre-card:active {
+  transform: scale(0.95);
+  opacity: 0.65;
 }
 .bottom-section .genre-card img {
   max-width: 100%;

@@ -37,7 +37,7 @@ const Navigation = (props) => {
     <div className="navigation-bar">
       <i className="fas fa-ellipsis-h"></i>
       <div className="page-links">
-        <Link to="/" className="page-link-custom page-link-active">
+        <Link to="/home" className="page-link-custom page-link-active">
           <i className="fas fa-home"></i>
           Home
         </Link>
