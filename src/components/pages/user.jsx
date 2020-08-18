@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 const User = (props) => {
   return (
     <div className="user">
-      <div className="user-header">
+      <div className="user-header header">
         <div className="user">
           <div className="image-cont">
             <img src={props.image} alt="user" />

@@ -10,7 +10,7 @@ const Browse = () => {
     spotifyAPI()
       .get("browse/categories")
       .then((res) => {
-        console.log(res)
+        console.log(res);
         setCategories(res.data.categories.items);
       })
       .catch((err) => {
@@ -20,7 +20,7 @@ const Browse = () => {
 
   return (
     <div className="browse">
-      <div className="top-section">
+      <div className="top-section header">
         <h2>Browse</h2>
         <nav>
           <div className="link active">GENRES &amp; MOODS</div>

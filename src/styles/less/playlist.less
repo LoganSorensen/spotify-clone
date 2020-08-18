@@ -1,17 +1,9 @@
 .playlist-page-header {
-  padding: 2.2%;
-  background: rgb(62, 62, 62);
-  background: linear-gradient(
-    180deg,
-    rgba(62, 62, 62, 1) 0%,
-    rgba(24, 24, 24, 1) 100%
-  );
-  display: flex;
-
+  align-items: flex-end;
   .playlist-img {
     width: 280px;
     height: 220px;
-    background-color: white;
+    background-color: @dark-gray;
 
     img {
       width: 100%;
@@ -19,26 +11,31 @@
   }
 
   .playlist-info {
-    margin: 5% 0 0 1.5%;
+    margin-left: 1.5%;
     width: 100%;
 
     .playlist-tag {
-      margin-bottom: 0;
       font-size: 1.2rem;
       font-weight: bold;
       letter-spacing: 1px;
     }
 
     h2 {
-      font-size: 4rem;
+      margin: 1% 0;
+      position: relative;
+      font-size: 4.6rem;
       font-weight: bold;
-      cursor: pointer;
+    }
+
+    .description {
+      color: @light-gray;
+      font-size: 1.4rem;
+      margin-bottom: 1.5%;
     }
 
     .creator-and-length {
       display: flex;
-      font-size: 1.3rem;
-      margin: 1% 0;
+      font-size: 1.4rem;
 
       p {
         color: @light-gray;
@@ -60,6 +57,7 @@
 
   .playlist-btns {
     width: 15%;
+    margin-top: 2%;
 
     .play-btn {
       background-color: @green-alt;
@@ -67,17 +65,15 @@
       border: none;
       font-size: 1.2rem;
       font-weight: bold;
-      padding: 5% 20%;
+      padding: 6% 20%;
       border-radius: 20px;
       width: 65%;
       margin-right: 5%;
       cursor: default;
-
       &:hover {
         transform: scale(1.07);
         background-color: @green;
       }
-
       &:active {
         transform: scale(1);
         background-color: @green-alt;
@@ -91,8 +87,8 @@
       font-size: 1.5rem;
       border-radius: 50px;
       padding: 3%;
-      width: 35px;
-
+      width: 32px;
+      height: 32px;
       &:hover {
         border-color: white;
       }

@@ -4,10 +4,11 @@ import { connect } from "react-redux";
 
 import { spotifyAPI } from "../utils/spotifyAPI";
 
-const PlaylistModal = (props) => {
+const EditPlaylistModal = (props) => {
+    // console.log(props)
   const [formData, setFormData] = useState({
-    name: `My playlist #${props.length + 1}`,
-    description: "",
+    name: `${props.name}`,
+    description: `${props.description}`,
   });
 
   const [modal, setModal] = useState(false);
@@ -15,15 +16,17 @@ const PlaylistModal = (props) => {
   const toggle = () => setModal(!modal);
 
   const handleChange = (e) => {
+      console.log(e.target.name, e.target.value)
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    console.log(formData)
   };
 
-  const createPlaylist = (e) => {
+  const editPlaylist = (e) => {
     e.preventDefault();
     console.log(formData);
     
     spotifyAPI()
-      .post(`users/${props.id}/playlists`, formData)
+      .put(`playlists/${props.playlist_id}`, formData)
       .then((res) => {
         console.log(res);
       })
@@ -32,19 +35,18 @@ const PlaylistModal = (props) => {
       });
 
     toggle();
-    setFormData({ name: `My playlist #${props.length + 1}`, description: "" });
-    window.location.reload();
+    setFormData({ name: `${props.name}`, description: `${props.description}` });
+    window.location.reload()
   };
 
   return (
     <div>
-      <button className="add-playlist-btn" onClick={toggle}>
-        <i className="fas fa-plus-circle"></i>New Playlist
+      <button className="edit-playlist-btn" onClick={toggle}>
       </button>
       <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Create Playlist</ModalHeader>
+        <ModalHeader toggle={toggle}>Edit Playlist Details</ModalHeader>
         <ModalBody>
-          <form onSubmit={createPlaylist}>
+          <form onSubmit={editPlaylist}>
             <div className="playlist-form">
               <div className="choose-img">
                 <i className="fas fa-music"></i>Choose image
@@ -55,7 +57,8 @@ const PlaylistModal = (props) => {
                   type="text"
                   id="playlist-name"
                   name="name"
-                  placeholder={`My playlist #${props.length + 1}`}
+                  placeholder='Playlist name'
+                value={formData.name}
                   onChange={handleChange}
                 />
                 <label htmlFor="playlist-desc">Description</label>
@@ -64,11 +67,12 @@ const PlaylistModal = (props) => {
                   id="playlist-desc"
                   name="description"
                   placeholder="Give your playlist a catchy description."
+                  value={formData.description}
                   onChange={handleChange}
                 />
               </div>
             </div>
-            <Button type="submit">CREATE</Button>
+            <Button type="submit">SAVE</Button>
           </form>
         </ModalBody>
         <ModalFooter></ModalFooter>
@@ -83,4 +87,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, {})(PlaylistModal);
+export default connect(mapStateToProps, {})(EditPlaylistModal);

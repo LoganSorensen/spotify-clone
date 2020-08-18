@@ -60,7 +60,7 @@ const Album = () => {
     <>
       {album && artist && (
         <div className="album">
-          <div className="album-page-header">
+          <div className="album-page-header header">
             <div className="image-cont">
               <img src={album.images[1].url} alt="album cover" />
             </div>

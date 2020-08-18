@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import SongList from "../songList";
+import EditPlaylistModal from "../editPlaylistModal";
 
 import { spotifyAPI } from "../../utils/spotifyAPI";
 
 const Playlist = (props) => {
   const params = useParams();
-  // console.log(params);
+  console.log(params);
 
   const [playlist, setPlaylist] = useState();
   const [tracks, setTracks] = useState();
@@ -16,7 +17,6 @@ const Playlist = (props) => {
     spotifyAPI()
       .get(`playlists/${params.id}`)
       .then((res) => {
-        // console.log(res.data);
         setPlaylist(res.data);
         setTracks(res.data.tracks);
       })
@@ -25,9 +25,11 @@ const Playlist = (props) => {
       });
   }, [params.id]);
 
+  console.log("playlist", playlist);
+
   return (
     <div className="playlist">
-      <div className="playlist-page-header">
+      <div className="playlist-page-header header">
         <div className="playlist-img">
           {playlist && playlist.images.length !== 0 && (
             <img src={playlist.images[1].url} alt="playlist cover" />
@@ -35,7 +37,19 @@ const Playlist = (props) => {
         </div>
         <div className="playlist-info">
           <p className="playlist-tag">PLAYLIST</p>
-          {playlist && <h2>{playlist.name}</h2>}
+          {playlist && (
+            <h2>
+              <EditPlaylistModal
+                name={playlist.name}
+                description={playlist.description}
+                playlist_id={playlist.id}
+              />
+              {playlist.name}
+            </h2>
+          )}
+          {playlist && playlist.description !== "" && (
+            <p className='description'>{playlist.description}</p>
+          )}
           <div className="creator-and-length">
             {playlist && (
               <p>
