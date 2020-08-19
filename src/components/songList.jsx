@@ -37,9 +37,14 @@ const SongList = (props) => {
     props.setCurrentSong(track.track);
   };
 
-  const truncateStr = (str) => {
-    const length = 60;
-    return str.length > length ? str.substr(0, length - 1) + "..." : str;
+  const truncateStr = (str, type) => {
+    if (type === 'title') {
+      const length = 60;
+      return str.length > length ? str.substr(0, length - 1) + "..." : str;
+    } else {
+      const length = 40;
+      return str.length > length ? str.substr(0, length - 1) + "..." : str;
+    }
   };
 
   return (
@@ -67,11 +72,11 @@ const SongList = (props) => {
                   className="far fa-play-circle"
                   onClick={() => handleClick(track)}
                 ></i>
-                <p className="title">{truncateStr(track.track.name)}</p>
+                <p className="title">{truncateStr(track.track.name, 'title')}</p>
                 <p className="artist">{track.track.artists[0].name}</p>
                 <p className="album">
                   <Link to={`/album/${track.track.album.id}`}>
-                    {track.track.album.name}
+                    {truncateStr(track.track.album.name, 'album')}
                   </Link>
                 </p>
                 <p className="date-added">{getDate(track.added_at)}</p>
