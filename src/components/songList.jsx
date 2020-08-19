@@ -33,7 +33,8 @@ const SongList = (props) => {
     return dateArray[0];
   };
 
-  const handleClick = (track) => {
+  const setSong = (track) => {
+    console.log(track)
     props.setCurrentSong(track.track);
   };
 
@@ -70,7 +71,7 @@ const SongList = (props) => {
               <div key={index} className="song">
                 <i
                   className="far fa-play-circle"
-                  onClick={() => handleClick(track)}
+                  onClick={() => setSong(track)}
                 ></i>
                 <p className="title">{truncateStr(track.track.name, 'title')}</p>
                 <p className="artist">{track.track.artists[0].name}</p>
@@ -99,7 +100,7 @@ const SongList = (props) => {
               <div key={index} className="song">
                 <i
                   className="far fa-play-circle"
-                  onClick={() => handleClick(track)}
+                  onClick={() => setSong(track)}
                 ></i>
                 <p className="title">{truncateStr(track.track.name)}</p>
                 <p className="artist">{track.track.artists[0].name}</p>

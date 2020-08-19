@@ -1,14 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 const TopBar = (props) => {
+  const [query, setQuery] = useState("");
+
+  // useEffect(() => {
+  //  if (query !== "") {
+
+  //    console.log("from the useEffect", query);
+  //  }
+   
+  // }, [query]);
+
+  const doneTyping = () => {
+    console.log('done typing',query)
+  }
+
+  const updateQuery = (e) => {
+    console.log(e.target.value);
+    setQuery(e.target.value);
+    if (query === e.target.value) {
+      setTimeout(doneTyping, 5000)
+
+    }
+  };
+
   return (
     <div className="top-bar">
       <div className="left-side">
         <i className="fas fa-chevron-left"></i>
         <i className="fas fa-chevron-right"></i>
-        <input type="text" className="search-bar" placeholder="Search" />
+        <Link to="/search">
+          <input
+            type="text"
+            className="search-bar"
+            placeholder="Search"
+            onChange={updateQuery}
+          />
+        </Link>
       </div>
       <div className="right-side">
         <Link to="/user" className="user">

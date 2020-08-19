@@ -1,0 +1,77 @@
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2.2%;
+
+  .test {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  a {
+      text-decoration: none;
+      color: white;
+  }
+
+  h3 {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 0.6%;
+    margin-bottom: 3%;
+    border-bottom: 1px solid @dark-gray;
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .light {
+    color: @light-gray;
+  }
+
+  .search-category {
+    width: 49%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .song,
+    .artist,
+    .album,
+    .playlist,
+    .show,
+    .episode {
+      width: 48%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 5%;
+      cursor: pointer;
+      &:hover {
+        background-color: @dark-gray;
+      }
+    }
+
+    .song-search-info,
+    .album-search-info {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .image-cont {
+      width: 65px;
+      height: 65px;
+      background-color: @light-gray;
+      margin-right: 5%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

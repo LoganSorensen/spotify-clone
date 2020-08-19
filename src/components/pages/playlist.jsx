@@ -6,9 +6,8 @@ import EditPlaylistModal from "../editPlaylistModal";
 
 import { spotifyAPI } from "../../utils/spotifyAPI";
 
-const Playlist = (props) => {
+const Playlist = () => {
   const params = useParams();
-  console.log(params);
 
   const [playlist, setPlaylist] = useState();
   const [tracks, setTracks] = useState();
@@ -24,8 +23,6 @@ const Playlist = (props) => {
         console.log(err);
       });
   }, [params.id]);
-
-  console.log("playlist", playlist);
 
   return (
     <div className="playlist">
@@ -48,7 +45,7 @@ const Playlist = (props) => {
             </h2>
           )}
           {playlist && playlist.description !== "" && (
-            <p className='description'>{playlist.description}</p>
+            <p className="description">{playlist.description}</p>
           )}
           <div className="creator-and-length">
             {playlist && (
