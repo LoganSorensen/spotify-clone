@@ -10,7 +10,7 @@ const GetAuth = () => {
         </p>
         <a
           className="green-btn"
-          href="https://accounts.spotify.com/en/authorize/?client_id=943586369faa422b8a79545a5ecdc6da&redirect_uri=http:%2F%2Flocalhost:3000/home&scope=playlist-modify-public&response_type=token"
+          href="https://accounts.spotify.com/en/authorize/?client_id=943586369faa422b8a79545a5ecdc6da&redirect_uri=http:%2F%2Flocalhost:3000/home&scope=playlist-modify-public%20user-follow-read%20user-top-read&response_type=token"
         >
           Allow
         </a>

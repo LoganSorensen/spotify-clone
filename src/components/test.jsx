@@ -1,6 +1,9 @@
-import React, { useEffect } from "react";
+import React, {  } from "react";
+import { Carousel } from 'antd';
+
 
 import { spotifyAPI } from "../utils/spotifyAPI";
+
 
 const Test = () => {
   const spotify = () => {
@@ -14,24 +17,9 @@ const Test = () => {
       });
   };
 
-  useEffect(() => {
-    let q = window.location.hash.substring(1);
-
-    q = q.split("&");
-    let z = q[0];
-    z = z.split("=");
-
-    console.log(z[1]);
-    if (z[1] !== undefined) {
-      localStorage.setItem("spotifyToken", z[1]);
-    }
-  }, []);
-
   return (
     <div>
-      <a href="https://accounts.spotify.com/en/authorize/?client_id=943586369faa422b8a79545a5ecdc6da&redirect_uri=http:%2F%2Flocalhost:3000&scope=playlist-modify-public%20user-follow-read%20user-top-read&response_type=token">
-        Get Token
-      </a>
+
       <button onClick={spotify}>Hit API</button>
     </div>
   );

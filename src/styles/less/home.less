@@ -1,19 +1,69 @@
 .home {
+  padding: 2.2%;
   img {
     width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .image-cont {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 0.6;
+      transform: scale(0.97);
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid @dark-gray;
+    padding-bottom: 0.5%;
+    // margin: 0 2.2%;
   }
 
   .top-tracks,
   .top-artists,
   .playlists {
     display: flex;
-    flex-wrap: wrap;
-    border: 1px solid red;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+    // border: 1px solid red;
+    overflow: hidden;
+    margin-bottom: 3%;
   }
   .track,
   .artist,
   .playlist {
-    width: 10%;
-    margin: 2%;
+    width: 15%;
+    margin: 1.2% 0;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 5% 0;
+  }
+
+  .album-name,
+  .artist .artist-name,
+  .playlist-name {
+    font-size: 1.4rem;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .track .artist-name,
+  .playlist-desc {
+    font-size: 1.3rem;
+    color: @light-gray;
+    cursor: default;
   }
 }
