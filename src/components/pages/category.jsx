@@ -31,7 +31,7 @@ const Category = () => {
           playlists.map((playlist) => {
               console.log(playlist)
             return (
-              <Link className="playlist">
+              <Link to={`/playlist/${playlist.id}`} className="playlist">
                 <div className="image-cont">
                   <img src={playlist.images[0].url} alt="playlist cover" />
                 </div>

@@ -29,7 +29,7 @@ const Playlist = () => {
       <div className="playlist-page-header header">
         <div className="playlist-img">
           {playlist && playlist.images.length !== 0 && (
-            <img src={playlist.images[1].url} alt="playlist cover" />
+            <img src={playlist.images[0].url} alt="playlist cover" />
           )}
         </div>
         <div className="playlist-info">
