@@ -2,28 +2,32 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
+import { setSearchResults } from "../actions/setSearchResultsActions";
+
+import { spotifyAPI } from "../utils/spotifyAPI";
+
 const TopBar = (props) => {
   const [query, setQuery] = useState("");
 
-  // useEffect(() => {
-  //  if (query !== "") {
+  useEffect(() => {
+    hitAPI();
+  }, [query]);
 
-  //    console.log("from the useEffect", query);
-  //  }
-   
-  // }, [query]);
-
-  const doneTyping = () => {
-    console.log('done typing',query)
-  }
+  const hitAPI = () => {
+    // console.log(query)
+    spotifyAPI()
+      .get(`search?q=${query}&type=track,artist,album,playlist,show,episode`)
+      .then((res) => {
+        console.log("response from test: ", res.data);
+        props.setSearchResults(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const updateQuery = (e) => {
-    console.log(e.target.value);
     setQuery(e.target.value);
-    if (query === e.target.value) {
-      setTimeout(doneTyping, 5000)
-
-    }
   };
 
   return (
@@ -62,4 +66,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, {})(TopBar);
+export default connect(mapStateToProps, { setSearchResults })(TopBar);

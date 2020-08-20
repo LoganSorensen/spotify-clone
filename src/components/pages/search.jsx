@@ -1,42 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-
 import { setCurrentSong } from "../../actions/setCurrentSongActions";
 
-import { spotifyAPI } from "../../utils/spotifyAPI";
-
 const SearchPage = (props) => {
-  const [query, setQuery] = useState("");
-  const [albums, setAlbums] = useState();
-  const [artists, setArtists] = useState();
-  const [episodes, setEpisodes] = useState();
-  const [playlists, setPlaylists] = useState();
-  const [shows, setShows] = useState();
-  const [tracks, setTracks] = useState();
-
-  const spotify = () => {
-    spotifyAPI()
-      .get(`search?q=${query}&type=track,artist,album,playlist,show,episode`)
-      .then((res) => {
-        // console.log("response from test: ", res.data);
-        setAlbums(res.data.albums.items.slice(0, 4));
-        setArtists(res.data.artists.items.slice(0, 4));
-        setEpisodes(res.data.episodes.items.slice(0, 4));
-        setPlaylists(res.data.playlists.items.slice(0, 4));
-        setShows(res.data.shows.items.slice(0, 4));
-        setTracks(res.data.tracks.items.slice(0, 4));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  const handleChange = (e) => {
-    // console.log(e.target.value);
-    setQuery(e.target.value);
-    // console.log(query);
-  };
+  const { albums, artists, episodes, playlists, shows, tracks } = props;
 
   const truncateStr = (str) => {
     const length = 32;
@@ -49,10 +17,6 @@ const SearchPage = (props) => {
 
   return (
     <div className="search-results">
-      <div className="test">
-        <input type="text" onChange={handleChange} />
-        <button onClick={spotify}>Hit API</button>
-      </div>
       <div className="search-category">
         <h3>Songs</h3>
         <div className="group">
@@ -197,4 +161,16 @@ const SearchPage = (props) => {
   );
 };
 
-export default connect(null, { setCurrentSong })(SearchPage);
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {
+    albums: state.setSearchResults.albums,
+    artists: state.setSearchResults.artists,
+    episodes: state.setSearchResults.episodes,
+    playlists: state.setSearchResults.playlists,
+    shows: state.setSearchResults.shows,
+    tracks: state.setSearchResults.tracks,
+  };
+};
+
+export default connect(mapStateToProps, { setCurrentSong })(SearchPage);
