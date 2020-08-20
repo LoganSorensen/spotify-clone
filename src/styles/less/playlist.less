@@ -1,8 +1,9 @@
 .playlist-page-header {
   align-items: flex-end;
+
   .playlist-img {
     width: 280px;
-    height: 220px;
+    height: 100%;
     background-color: @dark-gray;
 
     img {
@@ -58,6 +59,9 @@
   .playlist-btns {
     width: 15%;
     margin-top: 2%;
+    @media @desktop-mid {
+      width: 30%;
+    }
 
     .play-btn {
       background-color: @green-alt;

@@ -34,12 +34,26 @@ const SongList = (props) => {
   };
 
   const setSong = (track) => {
-    console.log(track)
+    console.log(track);
     props.setCurrentSong(track.track);
   };
 
+  const width = window.matchMedia("(max-width: 1850px)");
+  const widthSmall = window.matchMedia("(max-width: 1300px)");
+  const widthVerySmall = window.matchMedia("(max-width: 1100px)");
+
   const truncateStr = (str, type) => {
-    if (type === 'title') {
+    if (type === "title") {
+      if (widthVerySmall.matches) {
+        const length = 25;
+        return str.length > length ? str.substr(0, length - 1) + "..." : str;
+      } else if (widthSmall.matches) {
+        const length = 30;
+        return str.length > length ? str.substr(0, length - 1) + "..." : str;
+      } else if (width.matches) {
+        const length = 40;
+        return str.length > length ? str.substr(0, length - 1) + "..." : str;
+      }
       const length = 60;
       return str.length > length ? str.substr(0, length - 1) + "..." : str;
     } else {
@@ -47,6 +61,12 @@ const SongList = (props) => {
       return str.length > length ? str.substr(0, length - 1) + "..." : str;
     }
   };
+
+  function convertMS(ms) {
+    var minutes = Math.floor(ms / 60000);
+    var seconds = ((ms % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  }
 
   return (
     <div className="song-list">
@@ -73,15 +93,17 @@ const SongList = (props) => {
                   className="far fa-play-circle"
                   onClick={() => setSong(track)}
                 ></i>
-                <p className="title">{truncateStr(track.track.name, 'title')}</p>
+                <p className="title">
+                  {truncateStr(track.track.name, "title")}
+                </p>
                 <p className="artist">{track.track.artists[0].name}</p>
                 <p className="album">
                   <Link to={`/album/${track.track.album.id}`}>
-                    {truncateStr(track.track.album.name, 'album')}
+                    {truncateStr(track.track.album.name, "album")}
                   </Link>
                 </p>
                 <p className="date-added">{getDate(track.added_at)}</p>
-                <p className="length">{track.track.duration_ms}</p>
+                <p className="length">{convertMS(track.track.duration_ms)}</p>
               </div>
             );
           })

@@ -197,6 +197,13 @@ body {
   background: linear-gradient(180deg, #3e3e3e 0%, #181818 100%);
   display: flex;
 }
+.square {
+  width: 15.2%;
+  height: 0;
+  padding-bottom: 15.2%;
+  position: relative;
+  background-color: #2980b9;
+}
 .mid-section {
   display: flex;
   width: 100%;
@@ -265,8 +272,9 @@ body {
 }
 .top-bar .right-side .user .user-image-cont {
   background-color: white;
-  height: 30px;
+  height: 0;
   width: 30px;
+  height: 30px;
   margin-right: 2%;
   border-radius: 50px;
   overflow: hidden;
@@ -280,7 +288,7 @@ body {
 .navigation-bar {
   width: 10.3%;
   background-color: #121212;
-  height: 86.3vh;
+  max-height: 95.2%;
 }
 .navigation-bar .fa-ellipsis-h {
   color: white;
@@ -717,12 +725,38 @@ body {
   margin: 0 12% 0 7%;
   padding-right: 18%;
 }
+@media (max-width: 1600px) {
+  .song-list .categories .title {
+    padding-right: 17.5%;
+  }
+}
+@media (max-width: 1200px) {
+  .song-list .categories .title {
+    padding-right: 16%;
+    margin-left: 8%;
+  }
+}
 .song-list .categories .artist {
   padding-right: 18%;
+}
+@media (max-width: 1600px) {
+  .song-list .categories .artist {
+    padding-right: 16.8%;
+  }
+}
+@media (max-width: 1200px) {
+  .song-list .categories .artist {
+    padding-right: 15%;
+  }
 }
 .song-list .categories .album {
   margin-right: 5.5%;
   padding-right: 14.6%;
+}
+@media (max-width: 1200px) {
+  .song-list .categories .album {
+    padding-right: 13%;
+  }
 }
 .song-list .categories .date-added {
   margin-right: 5%;
@@ -730,6 +764,11 @@ body {
 }
 .song-list .categories .length {
   padding-right: 4%;
+}
+@media (max-width: 1600px) {
+  .song-list .categories .length {
+    padding: 0;
+  }
 }
 .song-list .song {
   display: flex;
@@ -807,7 +846,7 @@ body {
   margin: 0 5% 0 0.8%;
 }
 .album-songs .categories .title {
-  margin-right: 86%;
+  margin-right: 84%;
 }
 .album-songs .categories .length {
   margin-right: 1.5%;
@@ -975,6 +1014,16 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1600px) {
+  .top-section nav {
+    width: 65%;
+  }
+}
+@media (max-width: 1200px) {
+  .top-section nav {
+    width: 95%;
+  }
+}
 .top-section nav .link {
   cursor: pointer;
   color: #b3b3b3;
@@ -1001,9 +1050,10 @@ body {
   background-color: #181818;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   padding: 1% 0;
   min-height: 100%;
+  width: 100%;
 }
 .bottom-section .genre-card {
   color: white;
@@ -1043,7 +1093,7 @@ body {
 }
 .playlist-page-header .playlist-img {
   width: 280px;
-  height: 220px;
+  height: 100%;
   background-color: #282828;
 }
 .playlist-page-header .playlist-img img {
@@ -1089,6 +1139,11 @@ body {
 .playlist-page-header .playlist-btns {
   width: 15%;
   margin-top: 2%;
+}
+@media (max-width: 1600px) {
+  .playlist-page-header .playlist-btns {
+    width: 30%;
+  }
 }
 .playlist-page-header .playlist-btns .play-btn {
   background-color: #1db954;
@@ -1155,9 +1210,9 @@ body {
   display: flex;
 }
 .album .image-cont {
-  width: 16%;
-  height: 220px;
-  background-color: white;
+  width: 220px;
+  height: 100%;
+  background-color: #282828;
 }
 .album .image-cont img {
   width: 100%;
@@ -1245,7 +1300,8 @@ body {
 }
 .album .more-albums .album-list .image-cont {
   width: 100%;
-  height: 20.9em;
+  padding-bottom: 100%;
+  height: 0;
   cursor: pointer;
 }
 .album .more-albums .album-list .image-cont:hover {
@@ -1393,10 +1449,22 @@ body {
 }
 .search-results .search-category {
   width: 49%;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .search-results .search-category {
+    width: 45%;
+  }
+}
+.search-results .search-category .group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
 }
 .search-results .search-category .song,
 .search-results .search-category .artist,
@@ -1405,6 +1473,7 @@ body {
 .search-results .search-category .show,
 .search-results .search-category .episode {
   width: 48%;
+  height: 40%;
   display: flex;
   align-items: center;
   margin-bottom: 5%;
@@ -1430,6 +1499,9 @@ body {
   height: 65px;
   background-color: #b3b3b3;
   margin-right: 5%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .search-results .search-category .image-cont img {
   width: 100%;
