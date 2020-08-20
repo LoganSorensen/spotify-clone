@@ -7,7 +7,7 @@ const Test = () => {
 
   const spotify = () => {
     spotifyAPI()
-      .get(`search?q=${query}&type=track,artist,album,playlist,show,episode`)
+      .get(`me/tracks`)
       .then((res) => {
         console.log("response from test: ", res);
       })

@@ -1174,6 +1174,7 @@ body {
 }
 .liked-songs-header {
   padding: 3.1% 2.2% 2.2%;
+  flex-direction: column;
 }
 .liked-songs-header h2 {
   font-size: 4.5rem;
@@ -1186,6 +1187,7 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.7% 2.7%;
+  width: 7.6%;
   border-radius: 20px;
   letter-spacing: 1px;
   margin-top: 2%;
