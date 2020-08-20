@@ -12,7 +12,6 @@ const initialState = {
 export const setSearchResults = (state = initialState, action) => {
   switch (action.type) {
     case SET_SEARCH_RESULTS:
-      console.log("reducer", action.payload);
       return {
         ...state,
         albums: action.payload.albums.items.slice(0, 4),

@@ -20,13 +20,10 @@ const PlaylistModal = (props) => {
 
   const createPlaylist = (e) => {
     e.preventDefault();
-    console.log(formData);
-    
+
     spotifyAPI()
       .post(`users/${props.id}/playlists`, formData)
-      .then((res) => {
-        console.log(res);
-      })
+      .then((res) => {})
       .catch((err) => {
         console.log(err);
       });

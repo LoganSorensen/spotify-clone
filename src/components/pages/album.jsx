@@ -17,10 +17,9 @@ const Album = () => {
     spotifyAPI()
       .get(`/albums/${params.id}`)
       .then((res) => {
-        console.log(res.data)
         setAlbum(res.data);
         setTracks(res.data.tracks.items);
-        setArtist(res.data.artists[0])
+        setArtist(res.data.artists[0]);
       })
       .catch((err) => {
         console.log(err);
@@ -92,9 +91,8 @@ const Album = () => {
           {tracks && <AlbumSongs tracks={tracks} />}
           <p className="copyrights">{getCopyright(album.copyrights)}</p>
           <div className="more-albums">
-
-          <h4>More by {artist.name}</h4>
-          <MoreAlbums name={album.name} id={artist.id} />
+            <h4>More by {artist.name}</h4>
+            <MoreAlbums name={album.name} id={artist.id} />
           </div>
         </div>
       )}

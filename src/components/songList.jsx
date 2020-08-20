@@ -34,7 +34,6 @@ const SongList = (props) => {
   };
 
   const setSong = (track) => {
-    console.log(track);
     props.setCurrentSong(track.track);
   };
 

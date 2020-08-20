@@ -197,13 +197,6 @@ body {
   background: linear-gradient(180deg, #3e3e3e 0%, #181818 100%);
   display: flex;
 }
-.square {
-  width: 15.2%;
-  height: 0;
-  padding-bottom: 15.2%;
-  position: relative;
-  background-color: #2980b9;
-}
 .mid-section {
   display: flex;
   width: 100%;
@@ -1322,7 +1315,6 @@ body {
   letter-spacing: 1.5px;
 }
 .user .user-header {
-  display: flex;
   flex-direction: column;
 }
 .user .user-header .user {

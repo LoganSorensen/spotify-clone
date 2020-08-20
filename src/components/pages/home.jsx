@@ -12,13 +12,11 @@ const Home = (props) => {
   // get token from url
   useEffect(() => {
     let access_token = window.location.hash.substring(1);
-    // console.log(access_token)
 
     access_token = access_token.split("&");
     let token = access_token[0];
     token = token.split("=");
 
-    // console.log(token[1]);
     if (token[1] !== undefined) {
       localStorage.setItem("spotifyToken", token[1]);
     }

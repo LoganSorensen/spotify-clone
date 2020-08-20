@@ -11,20 +11,18 @@ const AlbumSongs = (props) => {
   function convertMS(ms) {
     var minutes = Math.floor(ms / 60000);
     var seconds = ((ms % 60000) / 1000).toFixed(0);
-    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
   }
 
   const width = window.matchMedia("(max-width: 1400px)");
 
   const truncateStr = (str) => {
-    
-      if (width.matches) {
-        const length = 75;
+    if (width.matches) {
+      const length = 75;
       return str.length > length ? str.substr(0, length - 1) + "..." : str;
-      } 
-      const length = 200;
-      return str.length > length ? str.substr(0, length - 1) + "..." : str;
-    
+    }
+    const length = 200;
+    return str.length > length ? str.substr(0, length - 1) + "..." : str;
   };
 
   return (
@@ -33,7 +31,6 @@ const AlbumSongs = (props) => {
         <p className="track-number">#</p>
         <p className="title">TITLE</p>
         <i className="far fa-clock length"></i>
-        {/* <i className="far fa-thumbs-up rating"></i> */}
       </div>
       <div className="tracks">
         {props.tracks.map((track) => {
@@ -46,7 +43,7 @@ const AlbumSongs = (props) => {
               <p className="track-number">{track.track_number}</p>
               <i className="far fa-heart"></i>
               <p className="name">{truncateStr(track.name)}</p>
-              <p className='length'>{convertMS(track.duration_ms)}</p>
+              <p className="length">{convertMS(track.duration_ms)}</p>
             </div>
           );
         })}

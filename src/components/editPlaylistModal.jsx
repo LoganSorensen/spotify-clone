@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { spotifyAPI } from "../utils/spotifyAPI";
 
 const EditPlaylistModal = (props) => {
-    // console.log(props)
   const [formData, setFormData] = useState({
     name: `${props.name}`,
     description: `${props.description}`,
@@ -16,33 +15,27 @@ const EditPlaylistModal = (props) => {
   const toggle = () => setModal(!modal);
 
   const handleChange = (e) => {
-      console.log(e.target.name, e.target.value)
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData)
   };
 
   const editPlaylist = (e) => {
     e.preventDefault();
-    console.log(formData);
-    
+
     spotifyAPI()
       .put(`playlists/${props.playlist_id}`, formData)
-      .then((res) => {
-        console.log(res);
-      })
+      .then((res) => {})
       .catch((err) => {
         console.log(err);
       });
 
     toggle();
     setFormData({ name: `${props.name}`, description: `${props.description}` });
-    window.location.reload()
+    window.location.reload();
   };
 
   return (
     <div>
-      <button className="edit-playlist-btn" onClick={toggle}>
-      </button>
+      <button className="edit-playlist-btn" onClick={toggle}></button>
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Edit Playlist Details</ModalHeader>
         <ModalBody>
@@ -57,8 +50,8 @@ const EditPlaylistModal = (props) => {
                   type="text"
                   id="playlist-name"
                   name="name"
-                  placeholder='Playlist name'
-                value={formData.name}
+                  placeholder="Playlist name"
+                  value={formData.name}
                   onChange={handleChange}
                 />
                 <label htmlFor="playlist-desc">Description</label>

@@ -52,9 +52,9 @@ const Navigation = (props) => {
       </div>
       {playlists !== undefined && (
         <>
-      <LibraryNav playlists={playlists} />
-      <PlaylistModal length={playlists.length} />
-      </>
+          <LibraryNav playlists={playlists} />
+          <PlaylistModal length={playlists.length} />
+        </>
       )}
     </div>
   );

@@ -162,7 +162,6 @@ const SearchPage = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     albums: state.setSearchResults.albums,
     artists: state.setSearchResults.artists,

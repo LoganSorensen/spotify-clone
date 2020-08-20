@@ -17,19 +17,13 @@ const Test = () => {
   };
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     setQuery(e.target.value);
-    console.log(query);
   };
 
   return (
     <div>
       <input type="text" onChange={handleChange} />
       <button onClick={spotify}>Hit API</button>
-
-      {/* <div id="sizer"> */}
-        <div id="square"></div>
-      {/* </div> */}
     </div>
   );
 };

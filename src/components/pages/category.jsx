@@ -12,7 +12,6 @@ const Category = () => {
     spotifyAPI()
       .get(`browse/categories/${params.id}/playlists`)
       .then((res) => {
-        console.log(res);
         setPlaylists(res.data.playlists.items);
       })
       .catch((err) => {
@@ -29,7 +28,6 @@ const Category = () => {
       <div className="playlists">
         {playlists &&
           playlists.map((playlist) => {
-              console.log(playlist)
             return (
               <Link to={`/playlist/${playlist.id}`} className="playlist">
                 <div className="image-cont">

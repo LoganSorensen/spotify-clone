@@ -21,7 +21,7 @@ const MoreAlbums = ({ id, name }) => {
   };
 
   const filterAlbums = (albums) => {
-      albums = albums.slice(0,6)
+    albums = albums.slice(0, 6);
     const result = albums.filter((album) => album.album_group === "album");
     const otherAlbums = result.filter((result) => result.name !== name);
     return otherAlbums;
@@ -31,8 +31,6 @@ const MoreAlbums = ({ id, name }) => {
     <div className="album-list">
       {albums &&
         filterAlbums(albums).map((album, index) => {
-          filterAlbums(albums);
-          // console.log(album);
           return (
             <div key={index} className="album">
               <Link to={`/album/${album.id}`}>
