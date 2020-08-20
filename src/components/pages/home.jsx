@@ -28,7 +28,6 @@ const Home = (props) => {
     spotifyAPI()
       .get("/me/top/tracks")
       .then((res) => {
-        // console.log(res.data.items);
         setTracks(res.data.items.slice(0, 6));
       })
       .catch((err) => {
@@ -37,7 +36,6 @@ const Home = (props) => {
     spotifyAPI()
       .get("/me/top/artists")
       .then((res) => {
-        // console.log(res.data.items);
         setArtists(res.data.items.slice(0, 6));
       })
       .catch((err) => {
@@ -46,7 +44,6 @@ const Home = (props) => {
     spotifyAPI()
       .get(`users/${props.id}/playlists`)
       .then((res) => {
-        // console.log(res.data.items);
         setPlaylists(res.data.items.slice(0, 6));
       })
       .catch((err) => {
@@ -59,15 +56,12 @@ const Home = (props) => {
     return str.length > length ? str.substr(0, length - 1) + "..." : str;
   };
 
-  // console.log(props);
-
   return (
     <div className="home">
       <h3>Your Top Albums</h3>
       <div className="top-tracks">
         {tracks &&
           tracks.map((track, index) => {
-            // console.log("track", track.album.id);
             return (
               <div key={index} className="track">
                 <Link to={`/album/${track.album.id}`} className="image-cont">
@@ -99,7 +93,6 @@ const Home = (props) => {
       <div className="playlists">
         {playlists &&
           playlists.map((playlist, index) => {
-            // console.log("playlist", playlist.id);
             return (
               <div key={index} className="playlist">
                 <Link to={`/playlist/${playlist.id}`} className="image-cont">
