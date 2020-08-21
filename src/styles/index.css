@@ -281,7 +281,8 @@ body {
 .navigation-bar {
   width: 10.3%;
   background-color: #121212;
-  max-height: 95.2%;
+  position: relative;
+  height: 90.7vh;
 }
 .navigation-bar .fa-ellipsis-h {
   color: white;
@@ -337,8 +338,7 @@ body {
   color: white;
 }
 .lib-and-playlist-links {
-  border-bottom: 1px solid #282828;
-  height: 71.7%;
+  height: 68.4%;
   overflow-y: scroll;
   padding: 2% 0 2% 0%;
 }
@@ -364,10 +364,13 @@ body {
   background-color: #121212;
 }
 .add-playlist-btn {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   color: #b3b3b3;
   background-color: #121212;
   border: none;
+  border-top: 1px solid #282828;
   border-bottom: 1px solid #282828;
   font-size: 1.5rem;
   font-weight: 500;
@@ -715,53 +718,19 @@ body {
   font-size: 1.5rem;
 }
 .song-list .categories .title {
-  margin: 0 12% 0 7%;
-  padding-right: 18%;
+  margin-left: 7%;
 }
-@media (max-width: 1600px) {
-  .song-list .categories .title {
-    padding-right: 17.5%;
-  }
+.song-list .title {
+  width: 32.7%;
 }
-@media (max-width: 1200px) {
-  .song-list .categories .title {
-    padding-right: 16%;
-    margin-left: 8%;
-  }
+.song-list .artist {
+  width: 21.5%;
 }
-.song-list .categories .artist {
-  padding-right: 18%;
+.song-list .album {
+  width: 23.5%;
 }
-@media (max-width: 1600px) {
-  .song-list .categories .artist {
-    padding-right: 16.8%;
-  }
-}
-@media (max-width: 1200px) {
-  .song-list .categories .artist {
-    padding-right: 15%;
-  }
-}
-.song-list .categories .album {
-  margin-right: 5.5%;
-  padding-right: 14.6%;
-}
-@media (max-width: 1200px) {
-  .song-list .categories .album {
-    padding-right: 13%;
-  }
-}
-.song-list .categories .date-added {
-  margin-right: 5%;
-  padding-right: 5%;
-}
-.song-list .categories .length {
-  padding-right: 4%;
-}
-@media (max-width: 1600px) {
-  .song-list .categories .length {
-    padding: 0;
-  }
+.song-list .date-added {
+  width: 12%;
 }
 .song-list .song {
   display: flex;
@@ -788,17 +757,7 @@ body {
   color: white;
 }
 .song-list .song .title {
-  margin: 0 0 0 4.4%;
-  width: 32.7%;
-}
-.song-list .song .artist {
-  width: 21.5%;
-}
-.song-list .song .album {
-  width: 23.5%;
-}
-.song-list .song .date-added {
-  width: 12%;
+  margin-left: 4.4%;
 }
 .song-list .song .date-added,
 .song-list .song .length {
