@@ -19,15 +19,17 @@
     letter-spacing: 1px;
     margin-top: 2%;
     cursor: default;
-
     &:hover {
       transform: scale(1.07);
       background-color: @green;
     }
-
     &:active {
       transform: scale(1);
       background-color: @green-alt;
+    }
+
+    @media @desktop-mid {
+      width: 12%;
     }
   }
 }

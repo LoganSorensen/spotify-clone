@@ -1008,7 +1008,7 @@ body {
 }
 @media (max-width: 1600px) {
   .top-section nav {
-    width: 65%;
+    width: 70%;
   }
 }
 @media (max-width: 1200px) {
@@ -1200,6 +1200,11 @@ body {
   transform: scale(1);
   background-color: #1db954;
 }
+@media (max-width: 1600px) {
+  .liked-songs-header button {
+    width: 12%;
+  }
+}
 .album .album-page-header {
   display: flex;
 }
@@ -1350,7 +1355,7 @@ body {
 }
 @media (max-width: 1600px) {
   .user .user-header nav {
-    width: 78%;
+    width: 80%;
   }
 }
 @media (max-width: 1200px) {
@@ -1521,8 +1526,8 @@ body {
   justify-content: space-evenly;
 }
 .results .search-category .image-cont {
-  width: 65px;
-  height: 65px;
+  min-width: 65px;
+  max-width: 65px;
   background-color: #b3b3b3;
   margin-right: 5%;
   overflow: hidden;
