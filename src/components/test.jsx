@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { spotifyAPI } from "../utils/spotifyAPI";
 
 const Test = () => {
-  const [query, setQuery] = useState("");
+  // const [query, setQuery] = useState("");
 
   const spotify = () => {
     spotifyAPI()
@@ -16,13 +16,13 @@ const Test = () => {
       });
   };
 
-  const handleChange = (e) => {
-    setQuery(e.target.value);
-  };
+  // const handleChange = (e) => {
+  // setQuery(e.target.value);
+  // };
 
   return (
     <div>
-      <input type="text" onChange={handleChange} />
+      {/* <input type="text" onChange={handleChange} /> */}
       <button onClick={spotify}>Hit API</button>
     </div>
   );

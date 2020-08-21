@@ -8,6 +8,9 @@
 .viewport {
   width: 76%;
   background-color: @darker-gray;
+  @media @desktop-mid {
+    width: 70%;
+  }
 }
 
 .view-content {
@@ -33,6 +36,12 @@
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+    @media @desktop-mid {
+      width: 27%;
+    }
+    @media @desktop-small {
+      width: 34%;
+    }
 
     a {
       margin-left: 2%;

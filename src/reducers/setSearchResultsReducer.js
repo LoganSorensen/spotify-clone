@@ -7,6 +7,7 @@ const initialState = {
   playlists: [],
   shows: [],
   tracks: [],
+  query: "",
 };
 
 export const setSearchResults = (state = initialState, action) => {
@@ -20,6 +21,7 @@ export const setSearchResults = (state = initialState, action) => {
         playlists: action.payload.playlists.items.slice(0, 4),
         shows: action.payload.shows.items.slice(0, 4),
         tracks: action.payload.tracks.items.slice(0, 4),
+        query: action.payload.query,
       };
     default:
       return state;

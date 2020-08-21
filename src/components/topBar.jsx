@@ -17,6 +17,7 @@ const TopBar = (props) => {
     spotifyAPI()
       .get(`search?q=${query}&type=track,artist,album,playlist,show,episode`)
       .then((res) => {
+        res.data.query = query;
         props.setSearchResults(res.data);
       })
       .catch((err) => {
