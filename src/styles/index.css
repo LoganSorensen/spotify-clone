@@ -263,6 +263,16 @@ body {
   height: 100%;
   padding-right: 2.3%;
 }
+@media (max-width: 1600px) {
+  .top-bar .right-side {
+    width: 22%;
+  }
+}
+@media (max-width: 1200px) {
+  .top-bar .right-side {
+    width: 27%;
+  }
+}
 .top-bar .right-side .user {
   align-items: center;
   display: flex;
@@ -361,6 +371,11 @@ body {
   height: 68.4%;
   overflow-y: scroll;
   padding: 2% 0 2% 0%;
+}
+@media (max-height: 750px) {
+  .lib-and-playlist-links {
+    height: 55%;
+  }
 }
 .lib-and-playlist-links .page-link-custom {
   padding: 5.6% 8%;
