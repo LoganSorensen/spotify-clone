@@ -20,6 +20,8 @@ const Home = (props) => {
     if (token[1] !== undefined) {
       localStorage.setItem("spotifyToken", token[1]);
     }
+
+    // reloads page after token is set in order to properly render components
     if (window.location.hash.includes('3600')){
       window.location.hash = '';
       window.location.reload();
