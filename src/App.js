@@ -34,7 +34,6 @@ function App(props) {
         <Viewport />
         <FriendsActivity />
       </div>
-
       <AudioBar />
     </div>
   );

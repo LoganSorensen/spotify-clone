@@ -20,6 +20,10 @@ const Home = (props) => {
     if (token[1] !== undefined) {
       localStorage.setItem("spotifyToken", token[1]);
     }
+    if (window.location.hash.includes('3600')){
+      window.location.hash = '';
+      window.location.reload();
+    }
   }, []);
 
   useEffect(() => {
